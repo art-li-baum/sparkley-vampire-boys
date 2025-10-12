@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://ctlnnx70b73b8" path="res://UI/images/placeholder_pfp.png" id="5_wr18j"]
 [ext_resource type="Texture2D" uid="uid://cku205o0cqnf8" path="res://UI/images/placeholder_socials_icons.png" id="6_qwutr"]
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_nneo1"]
-thickness = 2
-
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_tvd8v"]
 thickness = 4
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_nneo1"]
+thickness = 2
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -33,147 +33,14 @@ expand_mode = 2
 stretch_mode = 4
 
 [node name="left_side" type="Control" parent="."]
-clip_contents = true
 layout_mode = 1
 anchors_preset = 0
-offset_left = 202.0
-offset_top = 89.0
-offset_right = 1076.0
-offset_bottom = 1075.0
+offset_left = 124.0
+offset_top = 83.0
+offset_right = 784.0
+offset_bottom = 1084.0
 
-[node name="ColorRect" type="ColorRect" parent="left_side"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.969198, 0.975866, 0.999999, 1)
-
-[node name="ScrollContainer" type="ScrollContainer" parent="left_side"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scroll_vertical = 528
-
-[node name="MarginContainer" type="MarginContainer" parent="left_side/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 60
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 60
-
-[node name="VBoxContainer" type="VBoxContainer" parent="left_side/ScrollContainer/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="date" type="RichTextLabel" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2_nfk4m")
-theme_override_font_sizes/normal_font_size = 36
-text = "october 31"
-fit_content = true
-horizontal_alignment = 2
-
-[node name="HSeparator" type="HSeparator" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
-
-[node name="margin_text" type="MarginContainer" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="body_text" type="RichTextLabel" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/margin_text"]
-clip_contents = false
-layout_mode = 2
-theme = ExtResource("3_66tet")
-text = "i need to come up with names for our two yaoi romance vampire protagonists. i was going to fill this text box with stupid overdramatic yaoi until i realized that i'd have to name the characters, and im TERRIBLE at naming things, and i feel like if i picked a placeholder name it would stick, but maybe i should just be picking a placeholder name because this is a game jam and it's not like we have a ton of time to figure out what names would be good for our YAOI VAMPIRE PROTAGONISTS?? anyways there's two unnamed vampiries in a forest and they're sooo hot and the night is dark and the moon is sexy and they're like super into each other or whatever. one of them is looking into the other's eyes and it's a super tender moment until OH NO the SECRET THIRD VAMPIRE SHOWS UP and he's EVIL and HE CAN'T FIND OUT ABOUT THEIR FORBIDDEN LOVE!!111!!! but the two vampires look each other in the eyes and they know what they have to do. they have to kill the third guy to protect their passionate romance. it's like super dark and  dramatic but it's sooo hot the undertones are intense. i jujst remembreed these vampires are supposed to sparkllyl annd maybe this is a good time to mention ive never read twilight. double checking now that this will keep expanding if i add more text"
-fit_content = true
-
-[node name="margin_timer" type="MarginContainer" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="hbox" type="HBoxContainer" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer"]
-layout_direction = 3
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-color = Color(0.68673, 0.838364, 1, 1)
-
-[node name="posted" type="RichTextLabel" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/ColorRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_nfk4m")
-text = "posted!"
-scroll_active = false
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="timer" type="ProgressBar" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
-custom_minimum_size = Vector2(550, 50)
-layout_mode = 2
-show_percentage = false
-
-[node name="HSeparator2" type="HSeparator" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
-
-[node name="comments" type="RichTextLabel" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2_nfk4m")
-theme_override_font_sizes/normal_font_size = 36
-text = "comments (TODO)"
-fit_content = true
-
-[node name="HSeparator3" type="HSeparator" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
-
-[node name="margin_next" type="MarginContainer" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="control_next" type="Control" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/margin_next"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-
-[node name="button_next" type="Button" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/margin_next/control_next"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -190.0
-offset_bottom = 50.0
-grow_horizontal = 0
-text = "next ->"
-
-[node name="right_side" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -807.0
-offset_top = 87.0
-offset_right = -147.0
-offset_bottom = 1088.0
-grow_horizontal = 0
-
-[node name="hauntedcastle_title" type="RichTextLabel" parent="right_side"]
+[node name="hauntedcastle_title" type="RichTextLabel" parent="left_side"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -187,7 +54,7 @@ fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="right_side"]
+[node name="HSeparator" type="HSeparator" parent="left_side"]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 35.0
@@ -195,58 +62,124 @@ offset_right = 615.0
 offset_bottom = 181.0
 theme_override_styles/separator = SubResource("StyleBoxLine_tvd8v")
 
-[node name="ghost_pfp" type="TextureRect" parent="right_side"]
+[node name="ghost_pfp" type="TextureRect" parent="left_side"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 95.5
+offset_left = -280.5
 offset_top = 144.0
-offset_right = 275.5
+offset_right = -100.5
 offset_bottom = 327.0
 grow_horizontal = 2
 texture = ExtResource("5_wr18j")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="right_side"]
+[node name="socials" type="TextureRect" parent="left_side"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 85.0
+offset_left = -291.0
 offset_top = 346.0
-offset_right = 287.0
+offset_right = -89.0
 offset_bottom = 447.0
 grow_horizontal = 2
 texture = ExtResource("6_qwutr")
 expand_mode = 1
 
-[node name="archive_rss_random" type="RichTextLabel" parent="right_side"]
+[node name="archive_rss_random" type="RichTextLabel" parent="left_side"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 97.0
+offset_left = -279.0
 offset_top = 451.0
-offset_right = 270.0
+offset_right = -106.0
 offset_bottom = 530.0
 grow_horizontal = 2
 theme = ExtResource("2_nfk4m")
 bbcode_enabled = true
 text = "[u]archive[/u]|[u]RSS[/u]|[u]random[/u]"
 
-[node name="ghost_dialogue" type="Control" parent="right_side"]
+[node name="liked" type="Control" parent="left_side"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -283.5
+offset_left = -279.0
+offset_top = 546.0
+offset_right = -99.0
+offset_bottom = 598.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="left_side/liked"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.68673, 0.838364, 1, 1)
+
+[node name="blog_stats_label" type="RichTextLabel" parent="left_side/liked"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+text = "liked!"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="following" type="Control" parent="left_side"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -278.0
+offset_top = 618.0
+offset_right = -100.0
+offset_bottom = 670.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="left_side/following"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.686275, 0.839216, 1, 1)
+
+[node name="blog_stats_label" type="RichTextLabel" parent="left_side/following"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+text = "following!"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ghost_dialogue" type="Control" parent="left_side"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
 offset_top = 150.0
-offset_right = 56.5
+offset_right = 289.0
 offset_bottom = 513.0
 grow_horizontal = 2
 
-[node name="ColorRect" type="ColorRect" parent="right_side/ghost_dialogue"]
+[node name="ColorRect" type="ColorRect" parent="left_side/ghost_dialogue"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -255,7 +188,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.709804, 0.956863, 1)
 
-[node name="dialogue_box" type="RichTextLabel" parent="right_side/ghost_dialogue"]
+[node name="dialogue_box" type="RichTextLabel" parent="left_side/ghost_dialogue"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -271,7 +204,7 @@ text = "this is a dialogue box for the ghost girl! she can put quite a few lines
 scroll_active = false
 horizontal_alignment = 2
 
-[node name="about_me" type="RichTextLabel" parent="right_side/ghost_dialogue"]
+[node name="about_me" type="RichTextLabel" parent="left_side/ghost_dialogue"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -288,18 +221,18 @@ text = "about me :3"
 scroll_active = false
 horizontal_alignment = 2
 
-[node name="blog_stats" type="Control" parent="right_side"]
+[node name="blog_stats" type="Control" parent="left_side"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -283.0
+offset_left = -50.5
 offset_top = 543.0
-offset_right = 58.0
+offset_right = 290.5
 offset_bottom = 676.0
 grow_horizontal = 2
 
-[node name="ColorRect" type="ColorRect" parent="right_side/blog_stats"]
+[node name="ColorRect" type="ColorRect" parent="left_side/blog_stats"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -308,7 +241,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.910628, 0.983797, 1)
 
-[node name="blog_stats_label" type="RichTextLabel" parent="right_side/blog_stats"]
+[node name="blog_stats_label" type="RichTextLabel" parent="left_side/blog_stats"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -325,7 +258,7 @@ text = "blog stats!! XD"
 scroll_active = false
 horizontal_alignment = 2
 
-[node name="followers" type="RichTextLabel" parent="right_side/blog_stats"]
+[node name="followers" type="RichTextLabel" parent="left_side/blog_stats"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -341,7 +274,7 @@ text = "followers: 30"
 scroll_active = false
 horizontal_alignment = 2
 
-[node name="likes" type="RichTextLabel" parent="right_side/blog_stats"]
+[node name="likes" type="RichTextLabel" parent="left_side/blog_stats"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -357,27 +290,88 @@ text = "likes: 60"
 scroll_active = false
 horizontal_alignment = 2
 
-[node name="liked" type="Control" parent="right_side"]
+[node name="right_side" type="Control" parent="."]
+clip_contents = true
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 97.0
-offset_top = 546.0
-offset_right = 277.0
-offset_bottom = 598.0
-grow_horizontal = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1037.0
+offset_top = 88.0
+offset_right = -163.0
+offset_bottom = 1074.0
+grow_horizontal = 0
 
-[node name="ColorRect" type="ColorRect" parent="right_side/liked"]
+[node name="ColorRect" type="ColorRect" parent="right_side"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.969198, 0.975866, 0.999999, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="right_side"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_vertical = 528
+
+[node name="MarginContainer" type="MarginContainer" parent="right_side/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="right_side/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="date" type="RichTextLabel" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_nfk4m")
+theme_override_font_sizes/normal_font_size = 36
+text = "october 31"
+fit_content = true
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
+
+[node name="margin_text" type="MarginContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="body_text" type="RichTextLabel" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_text"]
+clip_contents = false
+layout_mode = 2
+theme = ExtResource("3_66tet")
+text = "i need to come up with names for our two yaoi romance vampire protagonists. i was going to fill this text box with stupid overdramatic yaoi until i realized that i'd have to name the characters, and im TERRIBLE at naming things, and i feel like if i picked a placeholder name it would stick, but maybe i should just be picking a placeholder name because this is a game jam and it's not like we have a ton of time to figure out what names would be good for our YAOI VAMPIRE PROTAGONISTS?? anyways there's two unnamed vampiries in a forest and they're sooo hot and the night is dark and the moon is sexy and they're like super into each other or whatever. one of them is looking into the other's eyes and it's a super tender moment until OH NO the SECRET THIRD VAMPIRE SHOWS UP and he's EVIL and HE CAN'T FIND OUT ABOUT THEIR FORBIDDEN LOVE!!111!!! but the two vampires look each other in the eyes and they know what they have to do. they have to kill the third guy to protect their passionate romance. it's like super dark and  dramatic but it's sooo hot the undertones are intense. i jujst remembreed these vampires are supposed to sparkllyl annd maybe this is a good time to mention ive never read twilight. double checking now that this will keep expanding if i add more text"
+fit_content = true
+
+[node name="margin_timer" type="MarginContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="hbox" type="HBoxContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
 color = Color(0.68673, 0.838364, 1, 1)
 
-[node name="blog_stats_label" type="RichTextLabel" parent="right_side/liked"]
+[node name="posted" type="RichTextLabel" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/ColorRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -385,40 +379,46 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_nfk4m")
-text = "liked!"
+text = "posted!"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="following" type="Control" parent="right_side"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 98.0
-offset_top = 618.0
-offset_right = 276.0
-offset_bottom = 670.0
-grow_horizontal = 2
+[node name="timer" type="ProgressBar" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
+custom_minimum_size = Vector2(550, 50)
+layout_mode = 2
+show_percentage = false
 
-[node name="ColorRect" type="ColorRect" parent="right_side/following"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.686275, 0.839216, 1, 1)
+[node name="HSeparator2" type="HSeparator" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
 
-[node name="blog_stats_label" type="RichTextLabel" parent="right_side/following"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="comments" type="RichTextLabel" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
 theme = ExtResource("2_nfk4m")
-text = "following!"
-scroll_active = false
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/normal_font_size = 36
+text = "comments (TODO)"
+fit_content = true
+
+[node name="HSeparator3" type="HSeparator" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
+
+[node name="margin_next" type="MarginContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="control_next" type="Control" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_next"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="button_next" type="Button" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_next/control_next"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -190.0
+offset_bottom = 50.0
+grow_horizontal = 0
+text = "next ->"
