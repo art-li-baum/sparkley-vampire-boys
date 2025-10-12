@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="blogpost" load_steps=2 format=3 uid="uid://cj6b8lun4auyn"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_eoovk"]
+
+[resource]
+script = ExtResource("1_eoovk")
+blog_text = ""

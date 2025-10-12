@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="blogpost" load_steps=2 format=3 uid="uid://d0hgk2xftya7x"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_elnbn"]
+
+[resource]
+script = ExtResource("1_elnbn")
+blog_text = "BABY WE'RE BACK AGAINNNN hittinng you with a SECOND TEST POST would you believe it. wow look at us go. i hope whoever is reading this (either li, or future me, but maybe sommebody else will read this someday, who really knows) is having a good day. i hope you're having an AWESOME day actually. i mean surely you have to be because what could possibly be more fun than reading whatever random words ive managed to come up with in order to fill out the length of a sample text post in my vampire yaoi fanfic writing simulator game?? is that an apt description? i think that's a pretty good description. i know i said this in another test piece of text already, but i love game dev, this is fun and awesome and im so skilled and talented and clearly this is going to be the best made ever made let's GO!!! wow having to sit around and write random text is really great for boosting the ego "
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

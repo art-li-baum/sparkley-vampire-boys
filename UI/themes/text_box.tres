@@ -1,5 +1,15 @@
-[gd_resource type="Theme" format=3 uid="uid://iegw0klkn57y"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://iegw0klkn57y"]
+
+[ext_resource type="FontFile" uid="uid://b7i87n14i7hxg" path="res://UI/fonts/LXGW_WenKai_Mono_TC/LXGWWenKaiMonoTC-Bold.ttf" id="1_3j475"]
+[ext_resource type="FontFile" uid="uid://dumoqokf8i312" path="res://UI/fonts/LXGW_WenKai_Mono_TC/LXGWWenKaiMonoTC-Light.ttf" id="2_4tlen"]
 
 [resource]
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/font_sizes/bold_font_size = 30
+RichTextLabel/font_sizes/mono_font_size = 30
 RichTextLabel/font_sizes/normal_font_size = 30
+RichTextLabel/fonts/bold_font = ExtResource("1_3j475")
+RichTextLabel/fonts/bold_italics_font = null
+RichTextLabel/fonts/italics_font = null
+RichTextLabel/fonts/mono_font = ExtResource("2_4tlen")
+RichTextLabel/fonts/normal_font = ExtResource("2_4tlen")

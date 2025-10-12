@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="blogpost" load_steps=2 format=3 uid="uid://bgcaoies6kq56"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_2m6c2"]
+
+[resource]
+script = ExtResource("1_2m6c2")
+blog_text = "this is the very first test post! wowowowow so exciting yayyyyy it's really funny that i need to have all these really long text posts so that i can test stuff in this game because that means we're just going to get soooo much of my rambling thought process written down along the way. of course i COULD go search up a lorem ipsum generator or whatever and it'd probably be a bit faster but honestly i think its more fun and organic for me to actually type something. and like what's the whole point of game dev if we're not having any fun here? i wonder if this is long enough already, if it is i guess this will be the end of the text here, if it's not then i'll be back see ya in a sec"
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"
