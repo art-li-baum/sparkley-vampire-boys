@@ -1,0 +1,402 @@
+[gd_scene load_steps=9 format=3 uid="uid://bw7cfrn3bwdcn"]
+
+[ext_resource type="Texture2D" uid="uid://hfda3hljr6f1" path="res://UI/images/placeholder_background.png" id="1_hq1ik"]
+[ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
+[ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="3_66tet"]
+[ext_resource type="Theme" uid="uid://bvdq6ng0i2vll" path="res://UI/themes/title.tres" id="4_7ycvg"]
+[ext_resource type="Texture2D" uid="uid://ctlnnx70b73b8" path="res://UI/images/placeholder_pfp.png" id="5_wr18j"]
+[ext_resource type="Texture2D" uid="uid://cku205o0cqnf8" path="res://UI/images/placeholder_socials_icons.png" id="6_qwutr"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_nneo1"]
+thickness = 2
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_tvd8v"]
+thickness = 4
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hq1ik")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="left_side" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 0
+offset_left = 202.0
+offset_top = 89.0
+offset_right = 1076.0
+offset_bottom = 1075.0
+
+[node name="ColorRect" type="ColorRect" parent="left_side"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.969198, 0.975866, 0.999999, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="left_side"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="left_side/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="left_side/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="date" type="RichTextLabel" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_nfk4m")
+theme_override_font_sizes/normal_font_size = 36
+text = "october 31"
+fit_content = true
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
+
+[node name="body_text" type="RichTextLabel" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_66tet")
+text = "i need to come up with names for our two yaoi romance vampire protagonists. i was going to fill this text box with stupid overdramatic yaoi until i realized that i'd have to name the characters, and im TERRIBLE at naming things, and i feel like if i picked a placeholder name it would stick, but maybe i should just be picking a placeholder name because this is a game jam and it's not like we have a ton of time to figure out what names would be good for our YAOI VAMPIRE PROTAGONISTS?? anyways there's two unnamed vampiries in a forest and they're sooo hot and the night is dark and the moon is sexy and they're like super into each other or whatever. one of them is looking into the other's eyes and it's a super tender moment until OH NO the SECRET THIRD VAMPIRE SHOWS UP and he's EVIL and HE CAN'T FIND OUT ABOUT THEIR FORBIDDEN LOVE!!111!!! but the two vampires look each other in the eyes and they know what they have to do. they have to kill the third guy to protect their passionate romance. it's like super dark and  dramatic but it's sooo hot the undertones are intense. i jujst remembreed these vampires are supposed to sparkllyl annd maybe this is a good time to mention ive never read twilight"
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+color = Color(0.68673, 0.838364, 1, 1)
+
+[node name="blog_stats_label" type="RichTextLabel" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.5
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+text = "liked!"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="post_timer" type="HBoxContainer" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/post_timer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+color = Color(0.68673, 0.838364, 1, 1)
+
+[node name="blog_stats_label" type="RichTextLabel" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer/post_timer/ColorRect"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 9.0
+offset_right = 197.0
+offset_bottom = 59.0
+theme = ExtResource("2_nfk4m")
+text = "posted!"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
+
+[node name="comments" type="RichTextLabel" parent="left_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_nfk4m")
+theme_override_font_sizes/normal_font_size = 36
+text = "comments"
+fit_content = true
+
+[node name="right_side" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -807.0
+offset_top = 87.0
+offset_right = -147.0
+offset_bottom = 1088.0
+grow_horizontal = 0
+
+[node name="hauntedcastle_title" type="RichTextLabel" parent="right_side"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 30.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme = ExtResource("4_7ycvg")
+bbcode_enabled = true
+text = "~~ [i]Haunted Castle[/i] ~~"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="right_side"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 35.0
+offset_right = 615.0
+offset_bottom = 181.0
+theme_override_styles/separator = SubResource("StyleBoxLine_tvd8v")
+
+[node name="ghost_pfp" type="TextureRect" parent="right_side"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 95.5
+offset_top = 144.0
+offset_right = 275.5
+offset_bottom = 327.0
+grow_horizontal = 2
+texture = ExtResource("5_wr18j")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="right_side"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 85.0
+offset_top = 346.0
+offset_right = 287.0
+offset_bottom = 447.0
+grow_horizontal = 2
+texture = ExtResource("6_qwutr")
+expand_mode = 1
+
+[node name="archive_rss_random" type="RichTextLabel" parent="right_side"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 97.0
+offset_top = 451.0
+offset_right = 270.0
+offset_bottom = 530.0
+grow_horizontal = 2
+theme = ExtResource("2_nfk4m")
+bbcode_enabled = true
+text = "[u]archive[/u]|[u]RSS[/u]|[u]random[/u]"
+
+[node name="ghost_dialogue" type="Control" parent="right_side"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -283.5
+offset_top = 150.0
+offset_right = 56.5
+offset_bottom = 513.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="right_side/ghost_dialogue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.709804, 0.956863, 1)
+
+[node name="dialogue_box" type="RichTextLabel" parent="right_side/ghost_dialogue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 61.0
+offset_right = -20.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+text = "this is a dialogue box for the ghost girl! she can put quite a few lines of dialogue in here. its like super cute or whatever. something blah blah lorem ipsum rawr XD!!!! lmao~ gotta fill out the rest of this box for the sake of examples. im so good at game development this is great"
+scroll_active = false
+horizontal_alignment = 2
+
+[node name="about_me" type="RichTextLabel" parent="right_side/ghost_dialogue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 15.0
+offset_right = -22.0
+offset_bottom = -306.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+theme_override_font_sizes/normal_font_size = 28
+text = "about me :3"
+scroll_active = false
+horizontal_alignment = 2
+
+[node name="blog_stats" type="Control" parent="right_side"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -283.0
+offset_top = 543.0
+offset_right = 58.0
+offset_bottom = 676.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="right_side/blog_stats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.910628, 0.983797, 1)
+
+[node name="blog_stats_label" type="RichTextLabel" parent="right_side/blog_stats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 13.0
+offset_right = -13.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+theme_override_font_sizes/normal_font_size = 28
+text = "blog stats!! XD"
+scroll_active = false
+horizontal_alignment = 2
+
+[node name="followers" type="RichTextLabel" parent="right_side/blog_stats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 59.0
+offset_right = -15.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+text = "followers: 30"
+scroll_active = false
+horizontal_alignment = 2
+
+[node name="likes" type="RichTextLabel" parent="right_side/blog_stats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 93.0
+offset_right = -15.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+text = "likes: 60"
+scroll_active = false
+horizontal_alignment = 2
+
+[node name="liked" type="Control" parent="right_side"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 97.0
+offset_top = 546.0
+offset_right = 277.0
+offset_bottom = 598.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="right_side/liked"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.68673, 0.838364, 1, 1)
+
+[node name="blog_stats_label" type="RichTextLabel" parent="right_side/liked"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 13.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+text = "liked!"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="following" type="Control" parent="right_side"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 98.0
+offset_top = 618.0
+offset_right = 276.0
+offset_bottom = 670.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="right_side/following"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.686275, 0.839216, 1, 1)
+
+[node name="blog_stats_label" type="RichTextLabel" parent="right_side/following"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 13.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nfk4m")
+text = "following!"
+scroll_active = false
+horizontal_alignment = 1
