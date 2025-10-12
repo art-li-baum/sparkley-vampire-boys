@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://bw7cfrn3bwdcn"]
+[gd_scene load_steps=16 format=3 uid="uid://bw7cfrn3bwdcn"]
 
 [ext_resource type="Script" uid="uid://c3wp45hdtp0ih" path="res://scripts/main_scene.gd" id="1_66tet"]
 [ext_resource type="Texture2D" uid="uid://hfda3hljr6f1" path="res://UI/images/placeholder_background.png" id="1_hq1ik"]
 [ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="2_7ycvg"]
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
 [ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="3_66tet"]
+[ext_resource type="Resource" uid="uid://c2odd5uo7derw" path="res://resources/posts/testpost_fulllines.tres" id="3_mo76n"]
 [ext_resource type="Resource" uid="uid://d0hgk2xftya7x" path="res://resources/posts/testpost2.tres" id="3_qwutr"]
 [ext_resource type="Theme" uid="uid://bvdq6ng0i2vll" path="res://UI/themes/title.tres" id="4_7ycvg"]
 [ext_resource type="Resource" uid="uid://bgcaoies6kq56" path="res://resources/posts/testpost1.tres" id="4_671wp"]
@@ -27,7 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_66tet")
-blog_posts = Array[ExtResource("2_7ycvg")]([ExtResource("4_671wp"), ExtResource("3_qwutr")])
+blog_posts = Array[ExtResource("2_7ycvg")]([ExtResource("3_mo76n"), ExtResource("4_671wp"), ExtResource("3_qwutr")])
 
 [node name="background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -304,7 +305,7 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1037.0
+offset_left = -1055.0
 offset_top = 88.0
 offset_right = -163.0
 offset_bottom = 1074.0
@@ -324,6 +325,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -364,9 +366,13 @@ theme = ExtResource("3_66tet")
 bbcode_enabled = true
 text = "12345678901234567890123456789012345678901234567890
 maximum of 50 characters per line
+123456789012345678901234567890123456789012345678901234i4u9
+1234567890123456789012345678901234567890123456 890 1234567 
+1234567890123456789012345678901234567890123456 890 23456789
 ------
 i need to come up with names for our two yaoi romance vampire protagonists. i was going to fill this text box with stupid overdramatic yaoi until i realized that i'd have to name the characters, and im TERRIBLE at naming things, and i feel like if i picked a placeholder name it would stick, but maybe i should just be picking a placeholder name because this is a game jam and it's not like we have a ton of time to figure out what names would be good for our YAOI VAMPIRE PROTAGONISTS?? anyways there's two unnamed vampiries in a forest and they're sooo hot and the night is dark and the moon is sexy and they're like super into each other or whatever. one of them is looking into the other's eyes and it's a super tender moment until OH NO the SECRET THIRD VAMPIRE SHOWS UP and he's EVIL and HE CAN'T FIND OUT ABOUT THEIR FORBIDDEN LOVE!!111!!! but the two vampires look each other in the eyes and they know what they have to do. they have to kill the third guy to protect their passionate romance. it's like super dark and  dramatic but it's sooo hot the undertones are intense. i jujst remembreed these vampires are supposed to sparkllyl annd maybe this is a good time to mention ive never read twilight. double checking now that this will keep expanding if i add more text"
 fit_content = true
+autowrap_mode = 2
 script = ExtResource("11_671wp")
 
 [node name="margin_timer" type="MarginContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
