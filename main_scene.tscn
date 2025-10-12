@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bw7cfrn3bwdcn"]
+[gd_scene load_steps=10 format=3 uid="uid://bw7cfrn3bwdcn"]
 
 [ext_resource type="Texture2D" uid="uid://hfda3hljr6f1" path="res://UI/images/placeholder_background.png" id="1_hq1ik"]
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://bvdq6ng0i2vll" path="res://UI/themes/title.tres" id="4_7ycvg"]
 [ext_resource type="Texture2D" uid="uid://ctlnnx70b73b8" path="res://UI/images/placeholder_pfp.png" id="5_wr18j"]
 [ext_resource type="Texture2D" uid="uid://cku205o0cqnf8" path="res://UI/images/placeholder_socials_icons.png" id="6_qwutr"]
+[ext_resource type="PackedScene" uid="uid://5bhsi4neomru" path="res://UI/comment.tscn" id="7_nfk4m"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_tvd8v"]
 thickness = 4
@@ -318,7 +319,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scroll_vertical = 528
+scroll_vertical = 816
 
 [node name="MarginContainer" type="MarginContainer" parent="right_side/ScrollContainer"]
 layout_mode = 2
@@ -399,6 +400,12 @@ theme = ExtResource("2_nfk4m")
 theme_override_font_sizes/normal_font_size = 36
 text = "comments (TODO)"
 fit_content = true
+
+[node name="comment" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_nfk4m")]
+layout_mode = 2
+
+[node name="comment2" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_nfk4m")]
+layout_mode = 2
 
 [node name="HSeparator3" type="HSeparator" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
