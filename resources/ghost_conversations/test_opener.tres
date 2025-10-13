@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Conversation" load_steps=5 format=3 uid="uid://cqbuywwv75uv3"]
+
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_kgdcr"]
+[ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_bystb"]
+
+[sub_resource type="Resource" id="Resource_kgdcr"]
+script = ExtResource("1_kgdcr")
+line_text = "HALOOO IM A TEST TEXT :)))))"
+anim_state = "idle_float"
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_bystb"]
+script = ExtResource("1_kgdcr")
+line_text = "here's another line to test!!! :0000"
+anim_state = "idle_float"
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[resource]
+script = ExtResource("2_bystb")
+lines = Array[ExtResource("1_kgdcr")]([SubResource("Resource_kgdcr"), SubResource("Resource_bystb")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"

@@ -80,6 +80,7 @@ func is_alphanumeric(char :String) ->bool:
 
 func check_input(char : String) ->bool :
 	if(!is_alphanumeric(char)): print("DID NOT TYPE LETTER SOMEHOW")
+	if(current_line >= line_list.size()): return false
 	
 	var line = line_list[current_line]
 
@@ -124,7 +125,7 @@ func check_if_done():
 				#send signal that post was complete
 				#TEST
 				print("completed post")
-				GameManager.completedPost.emit()
+				GameManager.finishedPost.emit()
 			return
 		
 	pass
@@ -153,9 +154,9 @@ func update_line_visual():
 
 func evaluate_post_progress(finished : bool = false):
 	if(finished):
-		GameManager.post_score(100)
+		GameManager.completePost.emit(100)
 		return
 		
 	#TODO:evaluate score based on percentage of lines completed weighted by word count?
 	var score = float(current_line)/line_list.size() * 100
-	GameManager.post_score(score)
+	GameManager.completePost.emit(score)

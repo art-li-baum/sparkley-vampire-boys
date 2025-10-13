@@ -1,7 +1,7 @@
 extends Button
 
 func _ready() -> void:
-	GameManager.completedPost.connect(awake)
+	GameManager.finishedPost.connect(awake)
 	
 
 func awake():

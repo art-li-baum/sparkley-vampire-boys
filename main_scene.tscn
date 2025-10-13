@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bw7cfrn3bwdcn"]
+[gd_scene load_steps=27 format=3 uid="uid://bw7cfrn3bwdcn"]
 
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
 [ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="3_66tet"]
@@ -15,6 +15,9 @@
 [ext_resource type="Script" uid="uid://xesayahxn2vw" path="res://scripts/post_button.gd" id="13_u0ygc"]
 [ext_resource type="Script" uid="uid://w6l73swcq8pg" path="res://classes/post_container.gd" id="15_u0ygc"]
 [ext_resource type="PackedScene" uid="uid://bdwc8l0npxyfu" path="res://scenes/blog_line.tscn" id="16_7th4q"]
+[ext_resource type="Material" uid="uid://gmg1kye0410m" path="res://mat/mat_blur.tres" id="16_m35m6"]
+[ext_resource type="Script" uid="uid://dkitrqwcfwrbt" path="res://classes/conversation_panel.gd" id="16_u0ygc"]
+[ext_resource type="Script" uid="uid://1x4tk5wtnuwy" path="res://scripts/conversation_box.gd" id="18_7th4q"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_tvd8v"]
 color = Color(0.109804, 0, 0, 1)
@@ -23,6 +26,68 @@ thickness = 4
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_nneo1"]
 color = Color(0.968627, 0.615686, 0.592157, 1)
 thickness = 2
+
+[sub_resource type="Animation" id="Animation_u0ygc"]
+resource_name = "talk_bounce"
+
+[sub_resource type="Animation" id="Animation_7th4q"]
+resource_name = "idle_float"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.56667, 3, 4.5, 6.03333),
+"transitions": PackedFloat32Array(1, 2, 1.68179, 1.86607, 1.7411),
+"update": 0,
+"values": [Vector2(503, 423), Vector2(503, 407.87), Vector2(503, 423), Vector2(503, 440), Vector2(503, 420)]
+}
+
+[sub_resource type="Animation" id="Animation_6jybn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(503, 423)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_84odl"]
+_data = {
+&"RESET": SubResource("Animation_6jybn"),
+&"idle_float": SubResource("Animation_7th4q"),
+&"talk_bounce": SubResource("Animation_u0ygc")
+}
+
+[sub_resource type="Animation" id="Animation_m35m6"]
+resource_name = "read_text"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ak604"]
+_data = {
+&"read_text": SubResource("Animation_m35m6")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -507,6 +572,87 @@ offset_bottom = 50.0
 grow_horizontal = 0
 text = "next ->"
 
+[node name="conversation-panel" type="Panel" parent="." node_paths=PackedStringArray("portrait", "conversation")]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("16_u0ygc")
+portrait = NodePath("ghost_portrait")
+conversation = NodePath("dialogue/conversation_box")
+
+[node name="Blur" type="ColorRect" parent="conversation-panel"]
+material = ExtResource("16_m35m6")
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1080.0
+
+[node name="ghost_portrait" type="TextureRect" parent="conversation-panel"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 423.0
+offset_right = 805.0
+offset_bottom = 698.0
+texture = ExtResource("5_wr18j")
+expand_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="conversation-panel/ghost_portrait"]
+libraries = {
+&"": SubResource("AnimationLibrary_84odl")
+}
+autoplay = "idle_float"
+
+[node name="dialogue" type="ColorRect" parent="conversation-panel"]
+layout_mode = 0
+offset_left = 881.0
+offset_top = 250.0
+offset_right = 1589.0
+offset_bottom = 608.0
+
+[node name="conversation_box" type="RichTextLabel" parent="conversation-panel/dialogue" node_paths=PackedStringArray("animator")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 45.0
+offset_right = -71.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "I've got somethign to tell you :P"
+scroll_active = false
+visible_characters_behavior = 1
+script = ExtResource("18_7th4q")
+animator = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="conversation-panel/dialogue/conversation_box"]
+reset_on_save = false
+libraries = {
+&"": SubResource("AnimationLibrary_ak604")
+}
+playback_auto_capture = false
+
+[node name="TextureButton" type="TextureButton" parent="conversation-panel/dialogue"]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -78.0
+offset_right = -44.0
+offset_bottom = -38.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("12_m35m6")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_text/post_container" method="evaluate_post_progress" binds= [true]]
 [connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" method="set_disabled" binds= [true]]
 [connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_next/control_next/button_next" to="." method="_on_button_next_pressed"]
+[connection signal="pressed" from="conversation-panel/dialogue/TextureButton" to="conversation-panel" method="play_next_line"]

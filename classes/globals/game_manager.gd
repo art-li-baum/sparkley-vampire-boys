@@ -2,8 +2,11 @@
 extends Node
 
 signal newBlogPost(bp : BlogPost)
-signal completedPost()
+signal finishedPost()
 signal postFailed()
+signal completePost(score : int)
+signal openConvo(cn : Conversation)
+signal completeConvo()
 
 var _sequence : Sequence = preload("uid://b6xhx4uhti62q").instantiate()
 
@@ -21,7 +24,20 @@ enum STATE
 
 var current_state : STATE = STATE.INITIAL
 
-func post_score(score : int):
+func _ready() -> void:
+	completeConvo.connect(_blog_post)
+	completePost.connect(_post_score)
+	
+
+func _post_convo():
+	current_state = STATE.GHOST
+	openConvo.emit(_sequence.convo_queue[current_loop])
+
+func _blog_post():
+	current_state = STATE.POST
+	newBlogPost.emit(_sequence.post_queue[current_loop])
+	
+func _post_score(score : int):
 	if(loop_scores.size()-1 < current_loop):
 		loop_scores.push_back(score)
 	else:
@@ -33,6 +49,5 @@ func post_score(score : int):
 
 func _process(delta: float) -> void:
 	if(current_state == STATE.INITIAL):
-		#TEST
-		current_state = STATE.POST
-		newBlogPost.emit(_sequence.post_queue[current_loop])
+		_post_convo()
+		
