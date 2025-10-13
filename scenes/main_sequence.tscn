@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6xhx4uhti62q"]
+[gd_scene load_steps=6 format=3 uid="uid://b6xhx4uhti62q"]
 
 [ext_resource type="Script" uid="uid://df1nm5dbf6rax" path="res://classes/sequence.gd" id="1_r4s3i"]
 [ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="2_sexdi"]
 [ext_resource type="Resource" uid="uid://b10e4ocamssy1" path="res://resources/posts/test_alphanumeric.tres" id="3_3p6o7"]
 [ext_resource type="Resource" uid="uid://sqq8oki2y20p" path="res://resources/posts/test_sequential.tres" id="3_bpke3"]
+[ext_resource type="Resource" uid="uid://dnwxsiuok7pae" path="res://resources/posts/test_score.tres" id="3_jjmfn"]
 
 [node name="MainSequence" type="Node"]
 script = ExtResource("1_r4s3i")
-post_queue = Array[ExtResource("2_sexdi")]([ExtResource("3_3p6o7"), ExtResource("3_bpke3")])
+post_queue = Array[ExtResource("2_sexdi")]([ExtResource("3_jjmfn"), ExtResource("3_3p6o7"), ExtResource("3_bpke3")])
 metadata/_custom_type_script = "uid://df1nm5dbf6rax"
 metadata/_edit_horizontal_guides_ = [79.0, 59.0]

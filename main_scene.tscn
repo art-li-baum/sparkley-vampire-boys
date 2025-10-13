@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bw7cfrn3bwdcn"]
+[gd_scene load_steps=18 format=3 uid="uid://bw7cfrn3bwdcn"]
 
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
 [ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="3_66tet"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://5bhsi4neomru" path="res://UI/comment.tscn" id="7_nfk4m"]
 [ext_resource type="Texture2D" uid="uid://bvdd2ogo2fqet" path="res://UI/images/victorian_floral_border.png" id="8_m35m6"]
 [ext_resource type="Theme" uid="uid://bhfqrba1uyn10" path="res://UI/themes/header.tres" id="12_2jcla"]
+[ext_resource type="Texture2D" uid="uid://d2ur5eeqh8lho" path="res://UI/images/blank_square.png" id="12_m35m6"]
+[ext_resource type="Script" uid="uid://ck0cfxqf8jpoj" path="res://scripts/timer_bar.gd" id="12_mo76n"]
+[ext_resource type="Script" uid="uid://xesayahxn2vw" path="res://scripts/post_button.gd" id="13_u0ygc"]
 [ext_resource type="Script" uid="uid://w6l73swcq8pg" path="res://classes/post_container.gd" id="15_u0ygc"]
 [ext_resource type="PackedScene" uid="uid://bdwc8l0npxyfu" path="res://scenes/blog_line.tscn" id="16_7th4q"]
 
@@ -444,28 +447,25 @@ theme_override_constants/margin_bottom = 20
 layout_direction = 3
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
+[node name="PostButton" type="Button" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-color = Color(0.68673, 0.838364, 1, 1)
-
-[node name="posted" type="RichTextLabel" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/ColorRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_nfk4m")
-text = "posted!"
-scroll_active = false
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_colors/font_disabled_color = Color(0.279357, 0.279357, 0.279357, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.666667, 0.788235, 0.960784, 1)
+disabled = true
+text = "POST"
+icon = ExtResource("12_m35m6")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("13_u0ygc")
 
 [node name="timer" type="ProgressBar" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
 custom_minimum_size = Vector2(550, 50)
 layout_mode = 2
+value = 100.0
 show_percentage = false
+script = ExtResource("12_mo76n")
 
 [node name="HSeparator2" type="HSeparator" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -507,4 +507,6 @@ offset_bottom = 50.0
 grow_horizontal = 0
 text = "next ->"
 
+[connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_text/post_container" method="evaluate_post_progress" binds= [true]]
+[connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" method="set_disabled" binds= [true]]
 [connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_next/control_next/button_next" to="." method="_on_button_next_pressed"]
