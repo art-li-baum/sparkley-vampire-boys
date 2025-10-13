@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=2 format=3 uid="uid://b10e4ocamssy1"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_1mful"]
+
+[resource]
+script = ExtResource("1_1mful")
+blog_text = "the quick brown fox jump over the lazy dog 1234 890"
+line_length = 50
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"
