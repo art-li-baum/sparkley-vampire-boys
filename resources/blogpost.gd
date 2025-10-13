@@ -1,7 +1,11 @@
+@tool
 class_name BlogPost
 extends Resource
 
 @export_multiline var blog_text: String
+@export var urgency : int = 1
+@export_tool_button("Suggest", "Callable") var eval_action = eval_time
+@export var time_to_write : float
 
 @export var line_length: int = 50
 
@@ -35,4 +39,19 @@ func parseString() -> Array[String]:
 		blog_string.push_back(s)
 	
 	return blog_string
+
+func eval_time():
+	var line_count = parseString().size()
+	
+	var mult 
+	match(urgency):
+		1 : mult = 1.2
+		2 : mult = .90
+		3 : mult = .75
+	
+	var estimate = (line_count * line_length ) / 4 * mult
+	
+	time_to_write = estimate
+	notify_property_list_changed()
+
 	
