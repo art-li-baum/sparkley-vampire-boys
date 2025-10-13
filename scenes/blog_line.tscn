@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdwc8l0npxyfu"]
+
+[ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="1_phb4d"]
+
+[node name="body_text" type="RichTextLabel"]
+clip_contents = false
+theme = ExtResource("1_phb4d")
+bbcode_enabled = true
+text = "[color=gray]you would want to test with a line that is long"
+fit_content = true
+autowrap_mode = 2

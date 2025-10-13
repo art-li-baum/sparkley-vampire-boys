@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=2 format=3 uid="uid://sqq8oki2y20p"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_jod8o"]
+
+[resource]
+script = ExtResource("1_jod8o")
+blog_text = "this would be the first line you'd see in the line this would be the sirst line you'd see in the line this would be the tirst line you'd see in the line this would be the forst line you'd see in the line "
+line_length = 50
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

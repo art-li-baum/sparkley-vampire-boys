@@ -1,4 +1,4 @@
-class_name blogpost
+class_name BlogPost
 extends Resource
 
 @export_multiline var blog_text: String
