@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dm6ih864vcq62"]
+
+[ext_resource type="FontFile" uid="uid://b7i87n14i7hxg" path="res://UI/fonts/LXGW_WenKai_Mono_TC/LXGWWenKaiMonoTC-Bold.ttf" id="1_7iup8"]
+[ext_resource type="FontFile" uid="uid://dumoqokf8i312" path="res://UI/fonts/LXGW_WenKai_Mono_TC/LXGWWenKaiMonoTC-Light.ttf" id="2_62yyk"]
+
+[resource]
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 1)
+RichTextLabel/constants/outline_size = 2
+RichTextLabel/font_sizes/bold_font_size = 30
+RichTextLabel/font_sizes/mono_font_size = 30
+RichTextLabel/font_sizes/normal_font_size = 30
+RichTextLabel/fonts/bold_font = ExtResource("1_7iup8")
+RichTextLabel/fonts/bold_italics_font = null
+RichTextLabel/fonts/italics_font = null
+RichTextLabel/fonts/mono_font = ExtResource("2_62yyk")
+RichTextLabel/fonts/normal_font = ExtResource("2_62yyk")

@@ -1,9 +1,10 @@
-[gd_resource type="Theme" format=3 uid="uid://bvdq6ng0i2vll"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bvdq6ng0i2vll"]
+
+[ext_resource type="FontFile" uid="uid://ocf48cwyae6v" path="res://UI/fonts/Ingrid_Darling/IngridDarling-Regular.ttf" id="1_yifj7"]
 
 [resource]
-RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
-RichTextLabel/font_sizes/bold_font_size = 48
-RichTextLabel/font_sizes/bold_italics_font_size = 48
-RichTextLabel/font_sizes/italics_font_size = 48
-RichTextLabel/font_sizes/mono_font_size = 48
-RichTextLabel/font_sizes/normal_font_size = 48
+RichTextLabel/colors/default_color = Color(0.964706, 0.611765, 0.588235, 1)
+RichTextLabel/colors/font_outline_color = Color(0.264087, 1.74173e-06, 0.00259483, 1)
+RichTextLabel/constants/outline_size = 12
+RichTextLabel/font_sizes/normal_font_size = 80
+RichTextLabel/fonts/normal_font = ExtResource("1_yifj7")
