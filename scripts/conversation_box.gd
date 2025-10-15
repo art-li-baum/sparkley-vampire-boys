@@ -5,5 +5,4 @@ class_name ConvoBox extends RichTextLabel
 func open_line(line : ConvoLine):
 	text = line.line_text
 	
-	#TODO this is busted for some reason?
 	animator.play("read_text")

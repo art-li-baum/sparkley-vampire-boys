@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bw7cfrn3bwdcn"]
+[gd_scene load_steps=33 format=3 uid="uid://bw7cfrn3bwdcn"]
 
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
 [ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="3_66tet"]
@@ -13,11 +13,16 @@
 [ext_resource type="Texture2D" uid="uid://d2ur5eeqh8lho" path="res://UI/images/blank_square.png" id="12_m35m6"]
 [ext_resource type="Script" uid="uid://ck0cfxqf8jpoj" path="res://scripts/timer_bar.gd" id="12_mo76n"]
 [ext_resource type="Script" uid="uid://xesayahxn2vw" path="res://scripts/post_button.gd" id="13_u0ygc"]
+[ext_resource type="Script" uid="uid://o0nkdnxd0trp" path="res://classes/comment_containter.gd" id="15_6jybn"]
 [ext_resource type="Script" uid="uid://w6l73swcq8pg" path="res://classes/post_container.gd" id="15_u0ygc"]
 [ext_resource type="PackedScene" uid="uid://bdwc8l0npxyfu" path="res://scenes/blog_line.tscn" id="16_7th4q"]
+[ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="16_ghshe"]
 [ext_resource type="Material" uid="uid://gmg1kye0410m" path="res://mat/mat_blur.tres" id="16_m35m6"]
 [ext_resource type="Script" uid="uid://dkitrqwcfwrbt" path="res://classes/conversation_panel.gd" id="16_u0ygc"]
+[ext_resource type="Resource" uid="uid://cx41li3enp01b" path="res://resources/comments/commentor/test_FAN_commentor.tres" id="17_fv2he"]
+[ext_resource type="Resource" uid="uid://cg8u6neifqu2x" path="res://resources/comments/commentor/test_NEUT_commentor.tres" id="18_5smuj"]
 [ext_resource type="Script" uid="uid://1x4tk5wtnuwy" path="res://scripts/conversation_box.gd" id="18_7th4q"]
+[ext_resource type="Resource" uid="uid://b581klwex0m7u" path="res://resources/comments/commentor/test_TROLL_commentor.tres" id="19_y5ved"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_tvd8v"]
 color = Color(0.109804, 0, 0, 1)
@@ -27,8 +32,20 @@ thickness = 4
 color = Color(0.968627, 0.615686, 0.592157, 1)
 thickness = 2
 
-[sub_resource type="Animation" id="Animation_u0ygc"]
-resource_name = "talk_bounce"
+[sub_resource type="Animation" id="Animation_6jybn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(503, 423)]
+}
 
 [sub_resource type="Animation" id="Animation_7th4q"]
 resource_name = "idle_float"
@@ -47,41 +64,14 @@ tracks/0/keys = {
 "values": [Vector2(503, 423), Vector2(503, 407.87), Vector2(503, 423), Vector2(503, 440), Vector2(503, 420)]
 }
 
-[sub_resource type="Animation" id="Animation_6jybn"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(503, 423)]
-}
+[sub_resource type="Animation" id="Animation_u0ygc"]
+resource_name = "talk_bounce"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_84odl"]
 _data = {
 &"RESET": SubResource("Animation_6jybn"),
 &"idle_float": SubResource("Animation_7th4q"),
 &"talk_bounce": SubResource("Animation_u0ygc")
-}
-
-[sub_resource type="Animation" id="Animation_m35m6"]
-resource_name = "read_text"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_84odl"]
@@ -97,6 +87,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_m35m6"]
+resource_name = "read_text"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ak604"]
@@ -559,10 +564,18 @@ theme_override_font_sizes/normal_font_size = 36
 text = "comments (TODO)"
 fit_content = true
 
-[node name="comment" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_nfk4m")]
+[node name="CommentContainer" type="VBoxContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("15_6jybn")
+commentors = Array[ExtResource("16_ghshe")]([ExtResource("17_fv2he"), ExtResource("18_5smuj"), ExtResource("19_y5ved")])
+
+[node name="comment4" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/CommentContainer" instance=ExtResource("7_nfk4m")]
 layout_mode = 2
 
-[node name="comment2" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_nfk4m")]
+[node name="comment" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/CommentContainer" instance=ExtResource("7_nfk4m")]
+layout_mode = 2
+
+[node name="comment5" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/CommentContainer" instance=ExtResource("7_nfk4m")]
 layout_mode = 2
 
 [node name="HSeparator3" type="HSeparator" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
@@ -589,6 +602,7 @@ grow_horizontal = 0
 text = "next ->"
 
 [node name="conversation-panel" type="Panel" parent="." node_paths=PackedStringArray("portrait", "conversation")]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -603,6 +617,7 @@ offset_right = 1919.0
 offset_bottom = 1080.0
 
 [node name="ghost_portrait" type="TextureRect" parent="conversation-panel"]
+modulate = Color(1, 1, 1, 0.780392)
 layout_mode = 0
 offset_left = 503.0
 offset_top = 423.0
@@ -616,6 +631,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_84odl")
 }
 autoplay = "idle_float"
+speed_scale = 1.5
 
 [node name="dialogue" type="ColorRect" parent="conversation-panel"]
 layout_mode = 0

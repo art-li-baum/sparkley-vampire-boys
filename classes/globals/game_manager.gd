@@ -7,6 +7,7 @@ signal postFailed()
 signal completePost(score : int)
 signal openConvo(cn : Conversation)
 signal completeConvo()
+signal openEval(loop : int , score : int)
 
 var _sequence : Sequence = preload("uid://b6xhx4uhti62q").instantiate()
 
@@ -37,6 +38,9 @@ func _blog_post():
 	current_state = STATE.POST
 	newBlogPost.emit(_sequence.post_queue[current_loop])
 	
+	if((OS.has_feature("web_android")||OS.has_feature("web_ios"))):
+		DisplayServer.virtual_keyboard_show("")
+	
 func _post_score(score : int):
 	if(loop_scores.size()-1 < current_loop):
 		loop_scores.push_back(score)
@@ -45,7 +49,10 @@ func _post_score(score : int):
 	
 	print("earned score %s for the %s round" % [score,current_loop]) 
 	
+	if((OS.has_feature("web_android")||OS.has_feature("web_ios"))):
+		DisplayServer.virtual_keyboard_hide()
 	current_state = STATE.EVAL
+	openEval.emit(current_loop,score)
 
 func _process(delta: float) -> void:
 	if(current_state == STATE.INITIAL):

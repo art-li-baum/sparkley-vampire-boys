@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_1mful")
 blog_text = "the quick brown fox jumps over the lazy dog 1234 567890"
-urgency = 3
-time_to_write = 10.0
+urgency = 1
+time_to_write = 30.0
 line_length = 50
 metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

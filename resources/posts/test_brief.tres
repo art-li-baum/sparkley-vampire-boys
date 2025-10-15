@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=2 format=3 uid="uid://7qmta1wamu6l"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_a4n8h"]
+
+[resource]
+script = ExtResource("1_a4n8h")
+blog_text = "belb"
+urgency = 1
+time_to_write = 10.0
+line_length = 50
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"
