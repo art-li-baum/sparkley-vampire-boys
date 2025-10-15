@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_a4n8h")
-blog_text = "belb"
+blog_text = "hmmm"
 urgency = 1
 time_to_write = 10.0
 line_length = 50

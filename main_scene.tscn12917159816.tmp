@@ -759,7 +759,7 @@ texture_normal = ExtResource("12_m35m6")
 ignore_texture_size = true
 stretch_mode = 0
 
-[connection signal="pressed" from="left_side/control_next/button_next" to="left_side/control_next/button_next" method="_on_button_next_pressed"]
+[connection signal="pressed" from="left_side/control_next/button_next" to="left_side/blog_stats" method="reveal"]
 [connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_text/post_container" method="evaluate_post_progress" binds= [true]]
 [connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" method="set_disabled" binds= [true]]
 [connection signal="pressed" from="conversation-panel/dialogue/TextureButton" to="conversation-panel" method="play_next_line"]

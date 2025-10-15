@@ -22,6 +22,9 @@ func _pull_post(post : BlogPost):
 	for n in get_children():
 		n.queue_free()
 	
+	line_textboxes.clear()
+	line_list.clear()
+	
 	current_post = post
 	
 	line_list = post.parseString()

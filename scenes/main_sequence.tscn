@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6xhx4uhti62q"]
+[gd_scene load_steps=16 format=3 uid="uid://b6xhx4uhti62q"]
 
 [ext_resource type="Script" uid="uid://df1nm5dbf6rax" path="res://classes/sequence.gd" id="1_r4s3i"]
 [ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="2_sexdi"]
@@ -8,10 +8,45 @@
 [ext_resource type="Resource" uid="uid://dnwxsiuok7pae" path="res://resources/posts/test_score.tres" id="3_jjmfn"]
 [ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="6_0wml1"]
 [ext_resource type="Resource" uid="uid://cqbuywwv75uv3" path="res://resources/ghost_conversations/test_opener.tres" id="7_72m7r"]
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="9_j2uhe"]
+
+[sub_resource type="Resource" id="Resource_qgkb7"]
+script = ExtResource("9_j2uhe")
+line_text = "You did it! You made a post!!"
+anim_state = "idle_float"
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_sxbir"]
+script = ExtResource("9_j2uhe")
+line_text = "I can finally live my dreams of being an author"
+anim_state = "idle_float"
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_wkxp4"]
+script = ExtResource("9_j2uhe")
+line_text = "Lets do another! Can't keep em waiting!"
+anim_state = "idle_float"
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_gw0tl"]
+script = ExtResource("6_0wml1")
+lines = Array[ExtResource("9_j2uhe")]([SubResource("Resource_qgkb7"), SubResource("Resource_sxbir"), SubResource("Resource_wkxp4")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"
+
+[sub_resource type="Resource" id="Resource_j2uhe"]
+script = ExtResource("9_j2uhe")
+line_text = "A Third loop even? Lets not get ahead of ourselves"
+anim_state = "idle_float"
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_0i1od"]
+script = ExtResource("6_0wml1")
+lines = Array[ExtResource("9_j2uhe")]([SubResource("Resource_j2uhe")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"
 
 [node name="MainSequence" type="Node"]
 script = ExtResource("1_r4s3i")
 post_queue = Array[ExtResource("2_sexdi")]([ExtResource("3_72m7r"), ExtResource("3_3p6o7"), ExtResource("3_jjmfn"), ExtResource("3_bpke3")])
-convo_queue = Array[ExtResource("6_0wml1")]([ExtResource("7_72m7r")])
+convo_queue = Array[ExtResource("6_0wml1")]([ExtResource("7_72m7r"), SubResource("Resource_gw0tl"), SubResource("Resource_0i1od")])
 metadata/_custom_type_script = "uid://df1nm5dbf6rax"
 metadata/_edit_horizontal_guides_ = [79.0, 59.0]
