@@ -14,6 +14,7 @@ func play_key_press():
 	sfx_player.stream = key_press_sfx
 	sfx_player.play()
 
-func play_ghost_noise():
+func play_ghost_noise(tone : float = 1.2):
+	sfx_player.pitch_scale = tone
 	sfx_player.stream = ghost_noise
 	sfx_player.play()

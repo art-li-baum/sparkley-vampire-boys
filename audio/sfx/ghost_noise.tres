@@ -5,7 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://3vbq3l3iuax5" path="res://audio/sfx/ghost3.mp3" id="3_y7kl7"]
 
 [resource]
-random_pitch = 1.2
+random_pitch = 1.35
+random_volume_offset_db = 0.12
 streams_count = 3
 stream_0/stream = ExtResource("1_22rsp")
 stream_1/stream = ExtResource("2_70qil")
