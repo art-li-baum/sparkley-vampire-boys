@@ -15,6 +15,7 @@ func _open_post(_bp):
 
 func awake():
 	disabled = false
+	grab_focus()
 	current_function = submit
 
 func did_fail(failed : bool):
