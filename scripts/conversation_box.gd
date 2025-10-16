@@ -6,3 +6,6 @@ func open_line(line : ConvoLine):
 	text = line.line_text
 	
 	animator.play("read_text")
+
+func speak():
+	AudioController.play_ghost_noise()

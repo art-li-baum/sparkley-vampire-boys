@@ -51,6 +51,7 @@ func _input(event: InputEvent) -> void:
 		if unicode > 20 and unicode < 40_000: # filters most control characters
 			var letter := String.chr(unicode)
 			if(check_input(letter)):
+				AudioController.play_key_press()
 				update_line_visual()
 				check_if_done()
 

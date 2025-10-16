@@ -12,3 +12,6 @@ func read_text(message : String):
 
 func continuity( convo :  Conversation):
 	text = convo.lines.back().line_text
+
+func speak():
+	AudioController.play_ghost_noise()

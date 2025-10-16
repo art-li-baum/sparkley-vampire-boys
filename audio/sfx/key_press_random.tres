@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=2 format=3 uid="uid://4yr45wdhs83t"]
+
+[ext_resource type="AudioStream" uid="uid://bi223rt82gfh0" path="res://audio/sfx/single-key-press-393908.mp3" id="1_obp2w"]
+
+[resource]
+playback_mode = 1
+random_pitch = 1.5
+random_volume_offset_db = 1.18
+streams_count = 1
+stream_0/stream = ExtResource("1_obp2w")
