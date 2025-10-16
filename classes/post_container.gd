@@ -15,7 +15,7 @@ const white_hex = "#f8f8ff"
 
 func _ready() -> void: 
 	GameManager.newBlogPost.connect(_pull_post)
-	GameManager.postFailed.connect(evaluate_post_progress)
+	GameManager.submitPost.connect(evaluate_post_progress)
 
 func _pull_post(post : BlogPost):
 	#Destroy all childern
@@ -104,7 +104,7 @@ func check_input(char : String) ->bool :
 			continue
 		
 		#check if it's the correct character TODO add capitalization agnostic
-		if(c == char):
+		if(c == char || c.to_lower() == char):
 			eval_list[i] = 1
 			return true
 		

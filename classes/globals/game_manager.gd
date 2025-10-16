@@ -1,12 +1,17 @@
 #name GameManager used in Globals
 extends Node
 
-signal newBlogPost(bp : BlogPost)
-signal finishedPost()
-signal postFailed()
-signal completePost(score : int)
+#phase 1 
 signal openConvo(cn : Conversation)
 signal completeConvo()
+
+#phase 2
+signal newBlogPost(bp : BlogPost)
+signal finishedPost()
+signal submitPost(did_succeed : bool)
+signal completePost(score : int)
+
+#phase 3
 signal openEval(loop : int , score : int)
 signal completeLoop()
 

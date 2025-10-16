@@ -4,11 +4,18 @@ var allotted_time
 
 var current_time = -1
 
+var tutorial_post = true
+
 func _ready() -> void:
 	GameManager.newBlogPost.connect(start_timer)
 
 
 func start_timer(post : BlogPost):
+	#ignore the timer on the first post
+	if(tutorial_post): 
+		value = 0
+		tutorial_post = false
+		return
 	allotted_time = post.time_to_write
 	if (allotted_time <= 0):
 		post.eval_time()
@@ -26,4 +33,4 @@ func _process(delta: float) -> void:
 	
 	if(current_time > allotted_time):
 		current_time = -1
-		GameManager.postFailed.emit()
+		GameManager.submitPost.emit(false)

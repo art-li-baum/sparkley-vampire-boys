@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://bw7cfrn3bwdcn"]
+[gd_scene load_steps=43 format=3 uid="uid://bw7cfrn3bwdcn"]
 
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
 [ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="3_66tet"]
@@ -10,17 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://cdpvoc2sccn4w" path="res://UI/images/facebook.png" id="7_yh4yk"]
 [ext_resource type="Texture2D" uid="uid://bvdd2ogo2fqet" path="res://UI/images/victorian_floral_border.png" id="8_m35m6"]
 [ext_resource type="Texture2D" uid="uid://dlqpijaoxu3l8" path="res://UI/images/instagram_logo.png" id="8_p8s74"]
-[ext_resource type="Script" path="res://classes/ghost_dialogue.gd" id="9_fv2he"]
+[ext_resource type="Script" uid="uid://cux87c7kpunxs" path="res://classes/ghost_dialogue.gd" id="9_fv2he"]
 [ext_resource type="Texture2D" uid="uid://skicy83xcu1r" path="res://UI/images/twitter.png" id="9_o4fqm"]
-[ext_resource type="Script" path="res://UI/dialogue_box.gd" id="10_y5ved"]
-[ext_resource type="Script" path="res://UI/blog_stats.gd" id="11_o7u2a"]
+[ext_resource type="Script" uid="uid://73vqokl4ki7c" path="res://UI/dialogue_box.gd" id="10_y5ved"]
+[ext_resource type="Script" uid="uid://t5fvl17b3byl" path="res://UI/blog_stats.gd" id="11_o7u2a"]
 [ext_resource type="Theme" uid="uid://bhfqrba1uyn10" path="res://UI/themes/header.tres" id="12_2jcla"]
-[ext_resource type="Script" path="res://UI/next_button.gd" id="12_ijoax"]
 [ext_resource type="RichTextEffect" uid="uid://cytcw8x7pw1tw" path="res://UI/test_rolling_effecct.tres" id="12_j8kkg"]
 [ext_resource type="Texture2D" uid="uid://d2ur5eeqh8lho" path="res://UI/images/blank_square.png" id="12_m35m6"]
 [ext_resource type="Script" uid="uid://ck0cfxqf8jpoj" path="res://scripts/timer_bar.gd" id="12_mo76n"]
 [ext_resource type="Script" uid="uid://xesayahxn2vw" path="res://scripts/post_button.gd" id="13_u0ygc"]
-[ext_resource type="Script" path="res://classes/comment_containter.gd" id="15_6jybn"]
+[ext_resource type="Script" uid="uid://o0nkdnxd0trp" path="res://classes/comment_containter.gd" id="15_6jybn"]
 [ext_resource type="Script" uid="uid://w6l73swcq8pg" path="res://classes/post_container.gd" id="15_u0ygc"]
 [ext_resource type="PackedScene" uid="uid://bdwc8l0npxyfu" path="res://scenes/blog_line.tscn" id="16_7th4q"]
 [ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="16_ghshe"]
@@ -532,7 +531,6 @@ text = "followers:"
 scroll_active = false
 
 [node name="follower_count" type="RichTextLabel" parent="left_side/blog_stats/followers"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.535
@@ -589,26 +587,6 @@ offset_bottom = 65.0
 grow_horizontal = 2
 theme = ExtResource("2_nfk4m")
 theme_override_styles/separator = SubResource("StyleBoxLine_yh4yk")
-
-[node name="control_next" type="Control" parent="left_side"]
-custom_minimum_size = Vector2(146.295, 50)
-layout_mode = 2
-anchors_preset = 0
-offset_left = 387.0
-offset_top = 813.0
-offset_right = 619.0
-offset_bottom = 900.0
-
-[node name="button_next" type="Button" parent="left_side/control_next" node_paths=PackedStringArray("stats")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "next ->"
-script = ExtResource("12_ijoax")
-stats = NodePath("../../blog_stats")
 
 [node name="right_side" type="Control" parent="."]
 clip_contents = true
@@ -692,11 +670,13 @@ theme_override_constants/margin_bottom = 20
 layout_direction = 3
 layout_mode = 2
 
-[node name="PostButton" type="Button" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
+[node name="PostButton" type="Button" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox" node_paths=PackedStringArray("stats")]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0.279357, 0.279357, 0.279357, 1)
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_normal_color = Color(0.666667, 0.788235, 0.960784, 1)
 disabled = true
 text = "POST"
@@ -704,6 +684,7 @@ icon = ExtResource("12_m35m6")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("13_u0ygc")
+stats = NodePath("../../../../../../../left_side/blog_stats")
 
 [node name="timer" type="ProgressBar" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
 custom_minimum_size = Vector2(550, 50)
@@ -831,7 +812,5 @@ texture_normal = ExtResource("12_m35m6")
 ignore_texture_size = true
 stretch_mode = 0
 
-[connection signal="pressed" from="left_side/control_next/button_next" to="left_side/control_next/button_next" method="_on_button_next_pressed"]
-[connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_text/post_container" method="evaluate_post_progress" binds= [true]]
-[connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" method="set_disabled" binds= [true]]
+[connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" method="_on_button_next_pressed"]
 [connection signal="pressed" from="conversation-panel/dialogue/TextureButton" to="conversation-panel" method="play_next_line"]
