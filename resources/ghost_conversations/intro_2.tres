@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Conversation" load_steps=5 format=3 uid="uid://bkbhsthp8uwf6"]
+
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_mlm77"]
+[ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_6dmci"]
+
+[sub_resource type="Resource" id="Resource_kgdcr"]
+script = ExtResource("1_mlm77")
+line_text = "omg you did greeeaat!! LOL i hope you're ready for the real first post... all 10 of our fans are eagerly waiting!"
+anim_state = "idle_float"
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_mlm77"]
+script = ExtResource("1_mlm77")
+line_text = "REALLY eagerly... you might want to type fast!"
+anim_state = "idle_float"
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[resource]
+script = ExtResource("2_6dmci")
+lines = Array[ExtResource("1_mlm77")]([SubResource("Resource_kgdcr"), SubResource("Resource_mlm77")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"

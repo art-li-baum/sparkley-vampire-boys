@@ -1,24 +1,26 @@
-[gd_scene load_steps=41 format=3 uid="uid://bw7cfrn3bwdcn"]
+[gd_scene load_steps=43 format=3 uid="uid://bw7cfrn3bwdcn"]
 
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
 [ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="3_66tet"]
 [ext_resource type="Theme" uid="uid://bvdq6ng0i2vll" path="res://UI/themes/title.tres" id="4_7ycvg"]
 [ext_resource type="Texture2D" uid="uid://ctlnnx70b73b8" path="res://UI/images/placeholder_pfp.png" id="5_wr18j"]
 [ext_resource type="Texture2D" uid="uid://b5eyck6qlwpqd" path="res://UI/images/background.png" id="6_mo76n"]
-[ext_resource type="Texture2D" uid="uid://cku205o0cqnf8" path="res://UI/images/placeholder_socials_icons.png" id="6_qwutr"]
 [ext_resource type="Texture2D" uid="uid://c0bluh7tk5as3" path="res://UI/images/castle5_1920_vignette.jpg" id="7_m35m6"]
 [ext_resource type="PackedScene" uid="uid://5bhsi4neomru" path="res://UI/comment.tscn" id="7_nfk4m"]
+[ext_resource type="Texture2D" uid="uid://cdpvoc2sccn4w" path="res://UI/images/facebook.png" id="7_yh4yk"]
 [ext_resource type="Texture2D" uid="uid://bvdd2ogo2fqet" path="res://UI/images/victorian_floral_border.png" id="8_m35m6"]
-[ext_resource type="Script" uid="uid://cux87c7kpunxs" path="res://classes/ghost_dialogue.gd" id="9_fv2he"]
-[ext_resource type="Script" uid="uid://73vqokl4ki7c" path="res://UI/dialogue_box.gd" id="10_y5ved"]
-[ext_resource type="Script" uid="uid://t5fvl17b3byl" path="res://UI/blog_stats.gd" id="11_o7u2a"]
+[ext_resource type="Texture2D" uid="uid://dlqpijaoxu3l8" path="res://UI/images/instagram_logo.png" id="8_p8s74"]
+[ext_resource type="Script" path="res://classes/ghost_dialogue.gd" id="9_fv2he"]
+[ext_resource type="Texture2D" uid="uid://skicy83xcu1r" path="res://UI/images/twitter.png" id="9_o4fqm"]
+[ext_resource type="Script" path="res://UI/dialogue_box.gd" id="10_y5ved"]
+[ext_resource type="Script" path="res://UI/blog_stats.gd" id="11_o7u2a"]
 [ext_resource type="Theme" uid="uid://bhfqrba1uyn10" path="res://UI/themes/header.tres" id="12_2jcla"]
-[ext_resource type="Script" uid="uid://b64eqm13i5d45" path="res://UI/next_button.gd" id="12_ijoax"]
+[ext_resource type="Script" path="res://UI/next_button.gd" id="12_ijoax"]
 [ext_resource type="RichTextEffect" uid="uid://cytcw8x7pw1tw" path="res://UI/test_rolling_effecct.tres" id="12_j8kkg"]
 [ext_resource type="Texture2D" uid="uid://d2ur5eeqh8lho" path="res://UI/images/blank_square.png" id="12_m35m6"]
 [ext_resource type="Script" uid="uid://ck0cfxqf8jpoj" path="res://scripts/timer_bar.gd" id="12_mo76n"]
 [ext_resource type="Script" uid="uid://xesayahxn2vw" path="res://scripts/post_button.gd" id="13_u0ygc"]
-[ext_resource type="Script" uid="uid://o0nkdnxd0trp" path="res://classes/comment_containter.gd" id="15_6jybn"]
+[ext_resource type="Script" path="res://classes/comment_containter.gd" id="15_6jybn"]
 [ext_resource type="Script" uid="uid://w6l73swcq8pg" path="res://classes/post_container.gd" id="15_u0ygc"]
 [ext_resource type="PackedScene" uid="uid://bdwc8l0npxyfu" path="res://scenes/blog_line.tscn" id="16_7th4q"]
 [ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="16_ghshe"]
@@ -34,21 +36,6 @@
 color = Color(0.109804, 0, 0, 1)
 thickness = 4
 
-[sub_resource type="Animation" id="Animation_y5ved"]
-resource_name = "read_text"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.966667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
 [sub_resource type="Animation" id="Animation_kv3aw"]
 length = 0.001
 tracks/0/type = "value"
@@ -62,6 +49,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_y5ved"]
+resource_name = "read_text"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o7u2a"]
@@ -234,50 +236,88 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -280.5
-offset_top = 223.0
-offset_right = -100.5
-offset_bottom = 406.0
+offset_left = -280.0
+offset_top = 235.0
+offset_right = -100.0
+offset_bottom = 418.0
 grow_horizontal = 2
 texture = ExtResource("5_wr18j")
 expand_mode = 1
 
 [node name="socials" type="TextureRect" parent="left_side"]
+modulate = Color(0.964706, 0.611765, 0.588235, 1)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -291.0
-offset_top = 424.0
-offset_right = -89.0
-offset_bottom = 525.0
+offset_left = -277.5
+offset_top = 440.0
+offset_right = -213.5
+offset_bottom = 504.0
 grow_horizontal = 2
-texture = ExtResource("6_qwutr")
+scale = Vector2(0.849925, 0.849925)
+texture = ExtResource("7_yh4yk")
+expand_mode = 1
+
+[node name="socials2" type="TextureRect" parent="left_side"]
+modulate = Color(0.964706, 0.611765, 0.588235, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -213.5
+offset_top = 440.0
+offset_right = -149.5
+offset_bottom = 504.0
+grow_horizontal = 2
+scale = Vector2(0.849925, 0.849925)
+texture = ExtResource("8_p8s74")
+expand_mode = 1
+
+[node name="socials3" type="TextureRect" parent="left_side"]
+modulate = Color(0.964706, 0.611765, 0.588235, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.5
+offset_top = 439.0
+offset_right = -87.5
+offset_bottom = 503.0
+grow_horizontal = 2
+scale = Vector2(0.849925, 0.849925)
+texture = ExtResource("9_o4fqm")
 expand_mode = 1
 
 [node name="archive_rss_random" type="RichTextLabel" parent="left_side"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -279.0
-offset_top = 530.0
-offset_right = -106.0
-offset_bottom = 609.0
+offset_left = -274.0
+offset_top = 510.0
+offset_right = -101.0
+offset_bottom = 618.0
 grow_horizontal = 2
 theme = ExtResource("2_nfk4m")
+theme_override_colors/default_color = Color(0.333333, 0.101961, 0.545098, 1)
+theme_override_colors/font_outline_color = Color(0.333333, 0.101961, 0.545098, 1)
+theme_override_constants/outline_size = 1
 bbcode_enabled = true
-text = "[b][u]archive[/u]|[u]RSS[/u]|[u]random[/u]"
+text = "[u]archive[/u] [color=black]|[/color] [u]RSS[/u] [color=black]|[/color]
+[u]random[/u]"
+horizontal_alignment = 2
 
 [node name="liked" type="Control" parent="left_side"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -279.0
-offset_top = 625.0
-offset_right = -99.0
-offset_bottom = 677.0
+offset_left = -235.0
+offset_top = 518.0
+offset_right = -101.0
+offset_bottom = 562.0
 grow_horizontal = 2
 
 [node name="ColorRect" type="ColorRect" parent="left_side/liked"]
@@ -287,9 +327,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.109804, 0, 0, 1)
+color = Color(0.706466, 0.41025, 0.43728, 1)
 
-[node name="blog_stats_label" type="RichTextLabel" parent="left_side/liked"]
+[node name="liked_label" type="RichTextLabel" parent="left_side/liked"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -297,7 +337,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_nfk4m")
-text = "liked!"
+theme_override_colors/default_color = Color(0.264087, 1.74173e-06, 0.00259483, 1)
+text = "liked! <3"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -307,10 +348,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -278.0
-offset_top = 697.0
+offset_left = -234.0
+offset_top = 576.0
 offset_right = -100.0
-offset_bottom = 749.0
+offset_bottom = 620.0
 grow_horizontal = 2
 
 [node name="ColorRect" type="ColorRect" parent="left_side/following"]
@@ -320,9 +361,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.109804, 0, 0, 1)
+color = Color(0.706466, 0.41025, 0.43728, 1)
 
-[node name="blog_stats_label" type="RichTextLabel" parent="left_side/following"]
+[node name="following_label" type="RichTextLabel" parent="left_side/following"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -330,6 +371,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_nfk4m")
+theme_override_colors/default_color = Color(0.264087, 1.74173e-06, 0.00259483, 1)
 text = "following!"
 scroll_active = false
 horizontal_alignment = 1
@@ -340,10 +382,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -51.0
-offset_top = 229.0
-offset_right = 289.0
-offset_bottom = 592.0
+offset_left = -50.5
+offset_top = 241.0
+offset_right = 289.5
+offset_bottom = 604.0
 grow_horizontal = 2
 script = ExtResource("9_fv2he")
 dialogue_box = NodePath("dialogue_box")
@@ -356,7 +398,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.45098, 0, 0.00784314, 1)
+color = Color(0.384314, 0.0627451, 0.121569, 1)
 
 [node name="dialogue_box" type="RichTextLabel" parent="left_side/ghost_dialogue" node_paths=PackedStringArray("animator")]
 layout_mode = 1
@@ -409,15 +451,26 @@ border_color = Color(0.964706, 0.611765, 0.588235, 1)
 border_width = 3.0
 editor_only = false
 
+[node name="HSeparator2" type="HSeparator" parent="left_side/ghost_dialogue"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 28.0
+offset_top = 59.0
+offset_right = -22.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme = ExtResource("2_nfk4m")
+
 [node name="blog_stats" type="Control" parent="left_side" node_paths=PackedStringArray("follower_count", "likes_count")]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -50.0
-offset_top = 622.0
-offset_right = 291.0
-offset_bottom = 774.0
+offset_left = -49.5
+offset_top = 627.0
+offset_right = 291.5
+offset_bottom = 779.0
 grow_horizontal = 2
 script = ExtResource("11_o7u2a")
 follower_count = NodePath("followers/follower_count")
@@ -441,7 +494,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.109804, 0, 0, 1)
+color = Color(0.384314, 0.0627451, 0.121569, 1)
 
 [node name="blog_stats_label" type="RichTextLabel" parent="left_side/blog_stats"]
 layout_mode = 1
@@ -464,8 +517,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 120.0
+offset_left = 120.5
 offset_top = 77.0
+offset_right = 0.5
 offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -519,21 +573,33 @@ text = "0000000"
 scroll_active = false
 custom_effects = [ExtResource("12_j8kkg")]
 
+[node name="HSeparator3" type="HSeparator" parent="left_side/blog_stats"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 27.5
+offset_top = 61.0
+offset_right = -22.5
+offset_bottom = 65.0
+grow_horizontal = 2
+theme = ExtResource("2_nfk4m")
+
 [node name="control_next" type="Control" parent="left_side"]
 custom_minimum_size = Vector2(146.295, 50)
 layout_mode = 2
 anchors_preset = 0
-offset_left = 289.0
-offset_top = 777.0
-offset_right = 521.0
-offset_bottom = 864.0
+offset_left = 387.0
+offset_top = 813.0
+offset_right = 619.0
+offset_bottom = 900.0
 
 [node name="button_next" type="Button" parent="left_side/control_next" node_paths=PackedStringArray("stats")]
 layout_mode = 1
-offset_left = 185.0
-offset_top = 59.0
-offset_right = 422.0
-offset_bottom = 150.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "next ->"
 script = ExtResource("12_ijoax")
 stats = NodePath("../../blog_stats")

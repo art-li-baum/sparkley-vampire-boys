@@ -1,6 +1,6 @@
 [gd_resource type="RichTextEffect" script_class="RollingTextEffect" load_steps=2 format=3 uid="uid://cytcw8x7pw1tw"]
 
-[ext_resource type="Script" uid="uid://1bgvx87x52m" path="res://UI/rolling_number_texteffect.gd" id="1_7886f"]
+[ext_resource type="Script" path="res://UI/rolling_number_texteffect.gd" id="1_7886f"]
 
 [resource]
 script = ExtResource("1_7886f")

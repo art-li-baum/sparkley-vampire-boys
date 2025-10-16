@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=2 format=3 uid="uid://cn3al3re6q00p"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_3pqph"]
+
+[resource]
+script = ExtResource("1_3pqph")
+blog_text = "hello my beloved followers! this is a quick news update, i'm BACK with new fanfic chapters :3 i have someone helping me type them now!!! next post soon <3"
+urgency = 1
+time_to_write = 0.0
+line_length = 50
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

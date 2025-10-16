@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=2 format=3 uid="uid://bt2qd7wyj4b0v"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_fa6qm"]
+
+[resource]
+script = ExtResource("1_fa6qm")
+blog_text = "damien walked carefully through the dark forest, tracking the spots of blood on the trees. damien knew he was around here somewhere... he squinted and sharpened his vampire senses to track his prey. there! he turned the corner only to find.... alaric, hunched over and bleeding! \"oh my god, alaric! whats wrong,\" damien said as he rushed over. \"don't worry.. it's okay... i'll heal.... there were wolves but i cchased them off,\" alaric said. \"i was ... protecting you.\""
+urgency = 1
+time_to_write = 0.0
+line_length = 50
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"
