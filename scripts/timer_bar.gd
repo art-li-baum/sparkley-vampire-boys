@@ -4,17 +4,14 @@ var allotted_time
 
 var current_time = -1
 
-var tutorial_post = true
-
 func _ready() -> void:
 	GameManager.newBlogPost.connect(start_timer)
 
 
 func start_timer(post : BlogPost):
 	#ignore the timer on the first post
-	if(tutorial_post): 
+	if(post.no_timer): 
 		value = 0
-		tutorial_post = false
 		AudioController.play_music()
 		return
 	allotted_time = post.time_to_write

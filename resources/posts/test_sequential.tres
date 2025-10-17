@@ -5,5 +5,8 @@
 [resource]
 script = ExtResource("1_jod8o")
 blog_text = "this would be the first line you'd see in the line this would be the sirst line you'd see in the line this would be the tirst line you'd see in the line this would be the forst line you'd see in the line "
+urgency = 1
+time_to_write = 0.0
 line_length = 50
+no_timer = false
 metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

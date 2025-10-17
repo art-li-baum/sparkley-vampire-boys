@@ -9,6 +9,8 @@ extends Resource
 
 @export var line_length: int = 50
 
+@export var no_timer : bool = false
+
 func parseString() -> Array[String]:
 	var blog_string :Array[String] = []
 	
