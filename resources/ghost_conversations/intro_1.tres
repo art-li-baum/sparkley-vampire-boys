@@ -7,36 +7,48 @@
 script = ExtResource("1_kx16r")
 line_text = "omg hiiiiii !!!!! its been YEARS since anyone found my laptop o_O"
 anim_state = "idle_float"
+text_read_speed = 1.2
+tone_pitch = 1.4
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_o2pyn"]
 script = ExtResource("1_kx16r")
 line_text = "ive been haunting it for so long..... XD "
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_qqoej"]
 script = ExtResource("1_kx16r")
 line_text = "i'm BloodMo0nsGhoul.. and this is the HAUNTED CASTLE, my ghoulblr blog!!! >:3"
-anim_state = "idle_float"
+anim_state = "talk_bounce"
+text_read_speed = 0.8
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_bystb"]
 script = ExtResource("1_kx16r")
 line_text = "now that ur here, can i ask u for a favor?? :3 "
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_kx16r"]
 script = ExtResource("1_kx16r")
 line_text = "i need someone to help me type my fanfics... my fans are DYING for the next update! :P"
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_ak0ir"]
 script = ExtResource("1_kx16r")
 line_text = "i juuuuuuust need you to press the right keys on your keyboard... i'll handle the rest!"
 anim_state = "idle_float"
+text_read_speed = 0.75
+tone_pitch = 1.3
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [resource]

@@ -1,6 +1,7 @@
 class_name ConversationPanel extends CanvasItem
 
 @export var portrait : TextureRect
+@export var portaint_anim : AnimationPlayer
 @export var conversation : RichTextLabel
 
 var current_convo : Conversation
@@ -24,6 +25,7 @@ func play_next_line():
 	var line = current_convo.next_line()
 	if(line == null): return
 
+	portaint_anim.play(line.anim_state)
 	conversation.open_line(line)
 
 	#TODO: add animation support

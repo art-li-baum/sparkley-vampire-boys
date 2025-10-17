@@ -7,6 +7,7 @@ signal completeConvo()
 
 #phase 2
 signal newBlogPost(bp : BlogPost)
+signal finishedLine(completion : float)
 signal finishedPost()
 signal submitPost(did_succeed : bool)
 signal completePost(score : int)

@@ -7,42 +7,56 @@
 script = ExtResource("1_xx6sb")
 line_text = "SOOO what did you think?? OwO"
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_mlm77"]
 script = ExtResource("1_xx6sb")
 line_text = "oh i should probably catch you up on the plot, basically damien and alaric used to be from warring vampire clans, but one day, alaric found out that... "
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_xx6sb"]
 script = ExtResource("1_xx6sb")
 line_text = "and so damien realized that was cruel and let alaric go! alaric thinks he owes a debt to damien and ALSO he secretly finds damien SUPER hot... "
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_otwhv"]
 script = ExtResource("1_xx6sb")
 line_text = "anyways basically alaric ends up watching over damien and makes sure that he never gets hurt! but damien has been catching on for a while and is trying to figure out why...."
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_rne4u"]
 script = ExtResource("1_xx6sb")
 line_text = "..."
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_f2gwt"]
 script = ExtResource("1_xx6sb")
 line_text = "oops! you probably couldn't read all that huh? i forgot i'm stuck in a web page now."
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_xswfo"]
 script = ExtResource("1_xx6sb")
 line_text = "well, i don't have time to explain it all again, we have more chapters to write!"
 anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [resource]
