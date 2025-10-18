@@ -1,10 +1,10 @@
-[gd_scene load_steps=49 format=3 uid="uid://bw7cfrn3bwdcn"]
+[gd_scene load_steps=48 format=3 uid="uid://bw7cfrn3bwdcn"]
 
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
 [ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="3_66tet"]
 [ext_resource type="Theme" uid="uid://bvdq6ng0i2vll" path="res://UI/themes/title.tres" id="4_7ycvg"]
-[ext_resource type="Texture2D" uid="uid://ctlnnx70b73b8" path="res://UI/images/placeholder_pfp.png" id="5_wr18j"]
 [ext_resource type="Texture2D" uid="uid://b5eyck6qlwpqd" path="res://UI/images/background.png" id="6_mo76n"]
+[ext_resource type="Texture2D" uid="uid://dbjfxojln51y6" path="res://UI/images/ghost_icon.png" id="6_opjno"]
 [ext_resource type="Texture2D" uid="uid://c0bluh7tk5as3" path="res://UI/images/castle5_1920_vignette.jpg" id="7_m35m6"]
 [ext_resource type="PackedScene" uid="uid://5bhsi4neomru" path="res://UI/comment.tscn" id="7_nfk4m"]
 [ext_resource type="Texture2D" uid="uid://cdpvoc2sccn4w" path="res://UI/images/facebook.png" id="7_yh4yk"]
@@ -13,10 +13,9 @@
 [ext_resource type="Script" uid="uid://cux87c7kpunxs" path="res://classes/ghost_dialogue.gd" id="9_fv2he"]
 [ext_resource type="Texture2D" uid="uid://skicy83xcu1r" path="res://UI/images/twitter.png" id="9_o4fqm"]
 [ext_resource type="Script" uid="uid://73vqokl4ki7c" path="res://UI/dialogue_box.gd" id="10_y5ved"]
-[ext_resource type="Script" uid="uid://t5fvl17b3byl" path="res://UI/blog_stats.gd" id="11_o7u2a"]
+[ext_resource type="Script" path="res://UI/blog_stats.gd" id="11_o7u2a"]
 [ext_resource type="Theme" uid="uid://bhfqrba1uyn10" path="res://UI/themes/header.tres" id="12_2jcla"]
 [ext_resource type="RichTextEffect" uid="uid://cytcw8x7pw1tw" path="res://UI/test_rolling_effecct.tres" id="12_j8kkg"]
-[ext_resource type="Texture2D" uid="uid://d2ur5eeqh8lho" path="res://UI/images/blank_square.png" id="12_m35m6"]
 [ext_resource type="Script" uid="uid://ck0cfxqf8jpoj" path="res://scripts/timer_bar.gd" id="12_mo76n"]
 [ext_resource type="Script" uid="uid://xesayahxn2vw" path="res://scripts/post_button.gd" id="13_u0ygc"]
 [ext_resource type="Script" uid="uid://o0nkdnxd0trp" path="res://classes/comment_containter.gd" id="15_6jybn"]
@@ -138,10 +137,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.56667, 3, 4.5, 6.03333),
-"transitions": PackedFloat32Array(1, 2, 1.68179, 1.86607, 1.7411),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
 "update": 0,
-"values": [Vector2(503, 423), Vector2(503, 407.87), Vector2(503, 423), Vector2(503, 440), Vector2(503, 420)]
+"values": [Vector2(380, 220)]
 }
 
 [sub_resource type="Animation" id="Animation_7th4q"]
@@ -155,10 +154,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.56667, 3, 4.5, 6.03333),
-"transitions": PackedFloat32Array(1, 2, 1.68179, 1.86607, 1.7411),
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(-2, -2, -2),
 "update": 0,
-"values": [Vector2(503, 423), Vector2(503, 407.87), Vector2(503, 423), Vector2(503, 440), Vector2(503, 420)]
+"values": [Vector2(380, 220), Vector2(380, 270), Vector2(380, 220)]
 }
 
 [sub_resource type="Animation" id="Animation_u0ygc"]
@@ -170,10 +169,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.466667, 1),
+"times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(503, 423), Vector2(503, 390), Vector2(503, 423)]
+"values": [Vector2(380, 220), Vector2(380, 280), Vector2(380, 220)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_84odl"]
@@ -306,7 +305,7 @@ offset_top = 235.0
 offset_right = -100.0
 offset_bottom = 418.0
 grow_horizontal = 2
-texture = ExtResource("5_wr18j")
+texture = ExtResource("6_opjno")
 expand_mode = 1
 
 [node name="socials" type="TextureRect" parent="left_side"]
@@ -566,9 +565,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
+offset_left = 16.5
 offset_top = 6.0
-offset_right = -12.0
+offset_right = -19.5
 offset_bottom = -59.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -583,10 +582,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 120.5
-offset_top = 77.0
-offset_right = 0.5
-offset_bottom = -26.0
+offset_left = 106.5
+offset_top = 78.0
+offset_right = -13.5
+offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_nfk4m")
@@ -606,6 +605,7 @@ offset_right = 8.36499
 offset_bottom = 3.5
 bbcode_enabled = true
 text = "00000000"
+horizontal_alignment = 2
 custom_effects = [ExtResource("12_j8kkg")]
 
 [node name="likes" type="RichTextLabel" parent="left_side/blog_stats"]
@@ -613,10 +613,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 163.0
-offset_top = 104.0
-offset_right = -1.0
-offset_bottom = 1.0
+offset_left = 149.0
+offset_top = 105.0
+offset_right = -15.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_nfk4m")
@@ -637,6 +637,7 @@ offset_bottom = 2.5
 bbcode_enabled = true
 text = "0000000"
 scroll_active = false
+horizontal_alignment = 2
 custom_effects = [ExtResource("12_j8kkg")]
 
 [node name="HSeparator3" type="HSeparator" parent="left_side/blog_stats"]
@@ -735,23 +736,25 @@ layout_mode = 2
 [node name="PostButton" type="Button" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox" node_paths=PackedStringArray("stats")]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-theme_override_colors/font_disabled_color = Color(0.279357, 0.279357, 0.279357, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0.666667, 0.788235, 0.960784, 1)
+focus_mode = 0
+theme = ExtResource("2_nfk4m")
+theme_override_font_sizes/font_size = 26
 disabled = true
-text = "POST"
-icon = ExtResource("12_m35m6")
+text = "post!!"
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("13_u0ygc")
 stats = NodePath("../../../../../../../left_side/blog_stats")
 
-[node name="timer" type="ProgressBar" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
-custom_minimum_size = Vector2(550, 50)
+[node name="VSeparator" type="VSeparator" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
 layout_mode = 2
-value = 100.0
+theme = ExtResource("2_nfk4m")
+
+[node name="timer" type="ProgressBar" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox"]
+custom_minimum_size = Vector2(570, 50)
+layout_mode = 2
+theme = ExtResource("2_nfk4m")
+value = 72.07
 show_percentage = false
 script = ExtResource("12_mo76n")
 
@@ -772,9 +775,9 @@ theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
 
 [node name="comments" type="RichTextLabel" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("2_nfk4m")
-theme_override_font_sizes/normal_font_size = 36
-text = "comments (TODO)"
+theme = ExtResource("12_2jcla")
+theme_override_font_sizes/normal_font_size = 48
+text = "Comments!"
 fit_content = true
 
 [node name="CommentContainer" type="VBoxContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
@@ -818,13 +821,13 @@ offset_right = 1919.0
 offset_bottom = 1080.0
 
 [node name="ghost_portrait" type="TextureRect" parent="conversation-panel"]
-modulate = Color(1, 1, 1, 0.780392)
-layout_mode = 0
-offset_left = 503.0
-offset_top = 423.0
-offset_right = 805.0
-offset_bottom = 698.0
-texture = ExtResource("5_wr18j")
+layout_mode = 1
+offset_left = 380.0
+offset_top = 220.03
+offset_right = 892.0
+offset_bottom = 732.03
+scale = Vector2(0.685, 0.685)
+texture = ExtResource("6_opjno")
 expand_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="conversation-panel/ghost_portrait"]
@@ -840,6 +843,18 @@ offset_left = 881.0
 offset_top = 250.0
 offset_right = 1589.0
 offset_bottom = 608.0
+color = Color(0.384314, 0.0627451, 0.121569, 1)
+
+[node name="ReferenceRect" type="ReferenceRect" parent="conversation-panel/dialogue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0.964706, 0.611765, 0.588235, 1)
+border_width = 3.0
+editor_only = false
 
 [node name="conversation_box" type="RichTextLabel" parent="conversation-panel/dialogue" node_paths=PackedStringArray("animator")]
 layout_mode = 1
@@ -848,17 +863,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 49.0
 offset_top = 45.0
-offset_right = -71.0
+offset_right = -84.0
 offset_bottom = -51.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 40
-text = "I've got somethign to tell you :P"
+theme = ExtResource("2_nfk4m")
+theme_override_font_sizes/normal_font_size = 36
+text = "I've got somethign to tell you :P long texst longadfsljsf sdndjfnj filtlu the box whats the limit of this box ablhisldfjbj lelhdfk ncvnmsdfjd fksdfbj k fgj jkd kow kfdflmdafi"
 scroll_active = false
-visible_characters = 29
 visible_characters_behavior = 1
-visible_ratio = 0.90622
 script = ExtResource("18_7th4q")
 animator = NodePath("AnimationPlayer")
 
@@ -869,23 +882,23 @@ libraries = {
 }
 playback_auto_capture = false
 
-[node name="TextureButton" type="TextureButton" parent="conversation-panel/dialogue"]
-modulate = Color(0, 1, 1, 1)
+[node name="TextureButton" type="Button" parent="conversation-panel/dialogue"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -84.0
+offset_left = -76.0
 offset_top = -78.0
-offset_right = -44.0
-offset_bottom = -38.0
+offset_right = -20.0
+offset_bottom = -22.0
 grow_horizontal = 0
 grow_vertical = 0
-texture_normal = ExtResource("12_m35m6")
-ignore_texture_size = true
-stretch_mode = 0
+focus_mode = 0
+theme = ExtResource("2_nfk4m")
+theme_override_font_sizes/font_size = 24
+text = ">>"
 
 [connection signal="pressed" from="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" to="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox/PostButton" method="_on_button_next_pressed"]
 [connection signal="pressed" from="conversation-panel/dialogue/TextureButton" to="conversation-panel" method="play_next_line"]

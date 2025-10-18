@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://5bhsi4neomru"]
 
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="1_240a0"]
-[ext_resource type="Script" uid="uid://bbpmv06la0g25" path="res://UI/comment_instance.gd" id="1_p1de6"]
+[ext_resource type="Script" path="res://UI/comment_instance.gd" id="1_p1de6"]
 [ext_resource type="Texture2D" uid="uid://cvq41cb0ogabv" path="res://UI/images/placeholder_commenter.png" id="2_p1de6"]
 
 [node name="MarginContainer" type="MarginContainer" node_paths=PackedStringArray("pfp", "username", "comment_box")]
@@ -25,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.668478, 0.786637, 0.960048, 1)
+color = Color(0.384314, 0.0627451, 0.121569, 1)
 
 [node name="commenter_name" type="RichTextLabel" parent="comment"]
 layout_mode = 2
