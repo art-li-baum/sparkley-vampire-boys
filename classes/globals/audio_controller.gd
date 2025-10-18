@@ -4,6 +4,7 @@ extends Node
 var key_press_sfx : AudioStreamRandomizer = preload("uid://4yr45wdhs83t")
 var ghost_noise : AudioStreamRandomizer = preload("uid://5fvt8xu0t7ms")
 var pop_noise : AudioStream = preload("uid://cbdaawyq3g2p7")
+var ding_noise : AudioStream = preload("uid://c2qft6eiuwuyo")
 
 var main_music : AudioStream = preload("uid://b0c10b0uylflm")
 
@@ -28,6 +29,11 @@ func play_key_press():
 func play_pop_noise():
 	var sfx_player = get_free_player()
 	sfx_player.stream = pop_noise
+	sfx_player.play()
+
+func play_ding_noise():
+	var sfx_player = get_free_player()
+	sfx_player.stream = ding_noise
 	sfx_player.play()
 
 func play_ghost_noise(tone : float = 1.2):
