@@ -28,13 +28,15 @@ func quip(completion : float):
 	
 	#TODO: have a random chance to encourage/ egg on the player 
 	if(randf() > 0.3):
-		if(completion > 90):
+		if(completion > 0.90):
 			dialogue_box.read_text("Almost there! Just a bit more!!")
-		if(completion > 75):
+		if(completion > 0.75):
 			dialogue_box.read_text("This is a great post so far, I love it!!")
-		if(completion > 60):
+		if(completion > 0.60):
 			dialogue_box.read_text("I love this line, gotta be one of my favorites")
-		if(completion > 50):
+		if(completion > 0.50):
 			dialogue_box.read_text("Typing is soooo much harder than it needs to be, but you're great at it1!!")
-		if(completion > 25):
+		if(completion > 0.25):
 			dialogue_box.read_text("That's a really good start! Keep it going")
+		else:
+			dialogue_box.read_text("That's a good one")
