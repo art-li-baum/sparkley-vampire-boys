@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Commentor" load_steps=8 format=3 uid="uid://cfc7ke3n75k1u"]
+
+[ext_resource type="Script" uid="uid://bmpqghx5yibll" path="res://resources/comments/comment.gd" id="1_sta2o"]
+[ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="2_2d7ek"]
+[ext_resource type="Texture2D" uid="uid://dysskefs8fsc2" path="res://resources/comments/commentor/scam.png" id="2_605ko"]
+
+[sub_resource type="Resource" id="Resource_lcyxy"]
+script = ExtResource("1_sta2o")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "click now for *FREE* Bitcoin!!!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_rqefd"]
+script = ExtResource("1_sta2o")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "you won't belIEVE these deals on [[hyperlink blocked]]"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_p1m5r"]
+script = ExtResource("1_sta2o")
+specific_post = -1
+score_range = Vector2(0, 50)
+comment_string = "looks like you're having a rough time out there :(
+Give our new line of Supplements a Try!!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_pgkdj"]
+script = ExtResource("1_sta2o")
+specific_post = 3
+score_range = Vector2(0, 100)
+comment_string = "TAKE THIS TO THE MOOOOOON"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[resource]
+script = ExtResource("2_2d7ek")
+profile_pic = ExtResource("2_605ko")
+username = "p(xQ*F#3@11"
+comments = Array[ExtResource("1_sta2o")]([SubResource("Resource_lcyxy"), SubResource("Resource_rqefd"), SubResource("Resource_p1m5r"), SubResource("Resource_pgkdj")])
+metadata/_custom_type_script = "uid://08i6jyrhkscd"

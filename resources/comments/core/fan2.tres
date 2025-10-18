@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Commentor" load_steps=6 format=3 uid="uid://bufmcdrioarox"]
+
+[ext_resource type="Script" uid="uid://bmpqghx5yibll" path="res://resources/comments/comment.gd" id="1_v44bv"]
+[ext_resource type="Texture2D" uid="uid://cmknnb3r8fp1v" path="res://UI/images/ed.png" id="2_v44bv"]
+[ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="3_hiat6"]
+
+[sub_resource type="Resource" id="Resource_evb40"]
+script = ExtResource("1_v44bv")
+specific_post = 0
+score_range = Vector2(0, 100)
+comment_string = "yooo this is so sick"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_e42pe"]
+script = ExtResource("1_v44bv")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "i always believed"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[resource]
+script = ExtResource("3_hiat6")
+profile_pic = ExtResource("2_v44bv")
+username = "xXstillTeamEdwardXx"
+comments = Array[ExtResource("1_v44bv")]([SubResource("Resource_evb40"), SubResource("Resource_e42pe")])
+metadata/_custom_type_script = "uid://08i6jyrhkscd"

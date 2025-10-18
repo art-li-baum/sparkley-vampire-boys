@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="Commentor" load_steps=9 format=3 uid="uid://d0fnll4vm2nt8"]
+
+[ext_resource type="Script" uid="uid://bmpqghx5yibll" path="res://resources/comments/comment.gd" id="1_eurgp"]
+[ext_resource type="Texture2D" uid="uid://cpd88u8352kta" path="res://UI/images/pfp.png" id="2_7xcvx"]
+[ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="2_hq2s1"]
+
+[sub_resource type="Resource" id="Resource_vm06f"]
+script = ExtResource("1_eurgp")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "my favorite thing is train!!!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_vm5by"]
+script = ExtResource("1_eurgp")
+specific_post = -1
+score_range = Vector2(0, 50)
+comment_string = "i don't think I like this one :("
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_atlxk"]
+script = ExtResource("1_eurgp")
+specific_post = 2
+score_range = Vector2(0, 100)
+comment_string = "Like if you came from sodaCrash's vid!!!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_7y13l"]
+script = ExtResource("1_eurgp")
+specific_post = 3
+score_range = Vector2(0, 100)
+comment_string = "this looks like what my cat barfed :/"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_ieppx"]
+script = ExtResource("1_eurgp")
+specific_post = -1
+score_range = Vector2(50, 100)
+comment_string = "I wanna read more!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[resource]
+script = ExtResource("2_hq2s1")
+profile_pic = ExtResource("2_7xcvx")
+username = "tinyTimmy12"
+comments = Array[ExtResource("1_eurgp")]([SubResource("Resource_vm06f"), SubResource("Resource_vm5by"), SubResource("Resource_atlxk"), SubResource("Resource_7y13l"), SubResource("Resource_ieppx")])
+metadata/_custom_type_script = "uid://08i6jyrhkscd"

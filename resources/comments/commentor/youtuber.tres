@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Commentor" load_steps=8 format=3 uid="uid://gaaw01mytiee"]
+
+[ext_resource type="Script" uid="uid://bmpqghx5yibll" path="res://resources/comments/comment.gd" id="1_f58tj"]
+[ext_resource type="Texture2D" uid="uid://c7u45lwgkoniw" path="res://UI/images/wahoo.jpg" id="2_06w7i"]
+[ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="2_geld5"]
+
+[sub_resource type="Resource" id="Resource_f58tj"]
+script = ExtResource("1_f58tj")
+specific_post = 0
+score_range = Vector2(0, 100)
+comment_string = "Is it okay if I do a video about your haunted blog??"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_geld5"]
+script = ExtResource("1_f58tj")
+specific_post = 1
+score_range = Vector2(0, 100)
+comment_string = "I'd like to do a video about this spooky dead blog"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_06w7i"]
+script = ExtResource("1_f58tj")
+specific_post = 3
+score_range = Vector2(0, 100)
+comment_string = "I can't believe this 
+Can't even make a lore vid on this nonsense"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_100bf"]
+script = ExtResource("1_f58tj")
+specific_post = -1
+score_range = Vector2(50, 100)
+comment_string = "follow me for recs for similiar blogs"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[resource]
+script = ExtResource("2_geld5")
+profile_pic = ExtResource("2_06w7i")
+username = "sodaCrashOffical"
+comments = Array[ExtResource("1_f58tj")]([SubResource("Resource_f58tj"), SubResource("Resource_geld5"), SubResource("Resource_06w7i"), SubResource("Resource_100bf")])
+metadata/_custom_type_script = "uid://08i6jyrhkscd"

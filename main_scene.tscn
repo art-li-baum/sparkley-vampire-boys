@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://bw7cfrn3bwdcn"]
+[gd_scene load_steps=49 format=3 uid="uid://bw7cfrn3bwdcn"]
 
 [ext_resource type="Theme" uid="uid://dpwusomufghrb" path="res://UI/themes/ghost_box.tres" id="2_nfk4m"]
 [ext_resource type="Theme" uid="uid://iegw0klkn57y" path="res://UI/themes/text_box.tres" id="3_66tet"]
@@ -30,6 +30,12 @@
 [ext_resource type="Script" uid="uid://1x4tk5wtnuwy" path="res://scripts/conversation_box.gd" id="18_7th4q"]
 [ext_resource type="Resource" uid="uid://b581klwex0m7u" path="res://resources/comments/commentor/test_TROLL_commentor.tres" id="19_y5ved"]
 [ext_resource type="Animation" uid="uid://dt1u7s4a8w6oc" path="res://animations/read_text.res" id="25_5smuj"]
+[ext_resource type="Resource" uid="uid://b0wv7m5u74mnx" path="res://resources/comments/core/fan1.tres" id="26_o4fqm"]
+[ext_resource type="Resource" uid="uid://cfc7ke3n75k1u" path="res://resources/comments/commentor/crypto_bro.tres" id="26_opjno"]
+[ext_resource type="Resource" uid="uid://bufmcdrioarox" path="res://resources/comments/core/fan2.tres" id="27_gfmxp"]
+[ext_resource type="Resource" uid="uid://gaaw01mytiee" path="res://resources/comments/commentor/youtuber.tres" id="27_meb7l"]
+[ext_resource type="Resource" uid="uid://bvcpxolvxbtpu" path="res://resources/comments/core/fan3.tres" id="28_1n88h"]
+[ext_resource type="Resource" uid="uid://d0fnll4vm2nt8" path="res://resources/comments/commentor/new_fan.tres" id="28_w30ff"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_tvd8v"]
 color = Color(0.109804, 0, 0, 1)
@@ -764,7 +770,8 @@ fit_content = true
 [node name="CommentContainer" type="VBoxContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 script = ExtResource("15_6jybn")
-commentors = Array[ExtResource("16_ghshe")]([ExtResource("17_fv2he"), ExtResource("18_5smuj"), ExtResource("19_y5ved")])
+commentors = Array[ExtResource("16_ghshe")]([ExtResource("17_fv2he"), ExtResource("18_5smuj"), ExtResource("19_y5ved"), ExtResource("26_opjno"), ExtResource("27_meb7l"), ExtResource("28_w30ff")])
+core_commentors = Array[ExtResource("16_ghshe")]([ExtResource("26_o4fqm"), ExtResource("27_gfmxp"), ExtResource("28_1n88h")])
 
 [node name="comment4" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/CommentContainer" instance=ExtResource("7_nfk4m")]
 layout_mode = 2
