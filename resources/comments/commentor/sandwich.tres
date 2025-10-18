@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="Commentor" load_steps=12 format=3 uid="uid://csp6a48rj4fq8"]
+
+[ext_resource type="Script" uid="uid://bmpqghx5yibll" path="res://resources/comments/comment.gd" id="1_hkvgc"]
+[ext_resource type="Texture2D" uid="uid://c6l6npelo5cmh" path="res://UI/images/pfp_sandwich.png" id="2_hkvgc"]
+[ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="3_1snwy"]
+
+[sub_resource type="Resource" id="Resource_8qsee"]
+script = ExtResource("1_hkvgc")
+specific_post = -1
+score_range = Vector2(60, 100)
+comment_string = "This was a delightful update to your fic. I am eagerly anticipating the next!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_s4l08"]
+script = ExtResource("1_hkvgc")
+specific_post = -1
+score_range = Vector2(0, 20)
+comment_string = "I would like to believe you are putting some effort into this fic... but I see no evidence that indicates this."
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_72x1p"]
+script = ExtResource("1_hkvgc")
+specific_post = -1
+score_range = Vector2(20, 50)
+comment_string = "Although I read this entire chapter out of a sheer curiosity, I must admit I struggled to enjoy it."
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_sey83"]
+script = ExtResource("1_hkvgc")
+specific_post = -1
+score_range = Vector2(50, 80)
+comment_string = "Overall I would say this chapter was rather whelming."
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_hkvgc"]
+script = ExtResource("1_hkvgc")
+specific_post = 0
+score_range = Vector2(0, 100)
+comment_string = "Awaiting your first post-return update with great anticipation."
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_4aexp"]
+script = ExtResource("1_hkvgc")
+specific_post = 7
+score_range = Vector2(0, 100)
+comment_string = "If you're not sure how to exit the game, you can always hit Alt-F4."
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_1snwy"]
+script = ExtResource("1_hkvgc")
+specific_post = 4
+score_range = Vector2(0, 100)
+comment_string = "I'm not certain this is a constructive set of behavior."
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_26c64"]
+script = ExtResource("1_hkvgc")
+specific_post = 6
+score_range = Vector2(60, 100)
+comment_string = "What a conclusion! I loved reading this fic, despite its ups and downs!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[resource]
+script = ExtResource("3_1snwy")
+profile_pic = ExtResource("2_hkvgc")
+username = "italian_sandwich"
+comments = Array[ExtResource("1_hkvgc")]([SubResource("Resource_8qsee"), SubResource("Resource_s4l08"), SubResource("Resource_72x1p"), SubResource("Resource_sey83"), SubResource("Resource_hkvgc"), SubResource("Resource_4aexp"), SubResource("Resource_1snwy"), SubResource("Resource_26c64")])
+metadata/_custom_type_script = "uid://08i6jyrhkscd"

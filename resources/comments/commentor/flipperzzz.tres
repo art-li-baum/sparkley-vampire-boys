@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Commentor" load_steps=11 format=3 uid="uid://cwrpey1ehcdrr"]
+
+[ext_resource type="Script" uid="uid://bmpqghx5yibll" path="res://resources/comments/comment.gd" id="1_at0u0"]
+[ext_resource type="Texture2D" uid="uid://bxf1l83ji3i8q" path="res://UI/images/pfp1.png" id="2_g342u"]
+[ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="3_hwse8"]
+
+[sub_resource type="Resource" id="Resource_8qsee"]
+script = ExtResource("1_at0u0")
+specific_post = -1
+score_range = Vector2(50, 100)
+comment_string = "l00ved the chapter cant wait for more!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_s4l08"]
+script = ExtResource("1_at0u0")
+specific_post = -1
+score_range = Vector2(0, 20)
+comment_string = "thiiiis update made no sense??"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_72x1p"]
+script = ExtResource("1_at0u0")
+specific_post = -1
+score_range = Vector2(20, 50)
+comment_string = "greeaat ficc, but, i think you should go back to the plot of your older chapters.."
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_sey83"]
+script = ExtResource("1_at0u0")
+specific_post = -1
+score_range = Vector2(80, 100)
+comment_string = "I LOOOVE THIS FIC SO MUCH!! THE BEST!!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_at0u0"]
+script = ExtResource("1_at0u0")
+specific_post = 0
+score_range = Vector2(0, 100)
+comment_string = "ooooOOOOOO i didnt think this blog would ever get an uupdate??"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_g342u"]
+script = ExtResource("1_at0u0")
+specific_post = 7
+score_range = Vector2(0, 100)
+comment_string = "thaaanks for playing!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_hwse8"]
+script = ExtResource("1_at0u0")
+specific_post = 4
+score_range = Vector2(0, 100)
+comment_string = "whaaaaaaaaaaaaaat is this about...."
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[resource]
+script = ExtResource("3_hwse8")
+profile_pic = ExtResource("2_g342u")
+username = "flipperzz"
+comments = Array[ExtResource("1_at0u0")]([SubResource("Resource_8qsee"), SubResource("Resource_s4l08"), SubResource("Resource_72x1p"), SubResource("Resource_sey83"), SubResource("Resource_at0u0"), SubResource("Resource_g342u"), SubResource("Resource_hwse8")])
+metadata/_custom_type_script = "uid://08i6jyrhkscd"

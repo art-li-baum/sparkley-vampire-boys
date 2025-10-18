@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="Commentor" load_steps=12 format=3 uid="uid://2dl5ig4jkmfb"]
+
+[ext_resource type="Script" uid="uid://bmpqghx5yibll" path="res://resources/comments/comment.gd" id="1_okf32"]
+[ext_resource type="Texture2D" uid="uid://bc7ux3cnr7yik" path="res://UI/images/pfp_squares.png" id="2_okf32"]
+[ext_resource type="Script" uid="uid://08i6jyrhkscd" path="res://resources/comments/commentor.gd" id="3_gvc0v"]
+
+[sub_resource type="Resource" id="Resource_8qsee"]
+script = ExtResource("1_okf32")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "WHENENNN WILL THEY KISS??/??"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_s4l08"]
+script = ExtResource("1_okf32")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "will you write a kiss scene??? "
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_72x1p"]
+script = ExtResource("1_okf32")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "YOU NEED TO MAKE HTEM KISS!!"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_sey83"]
+script = ExtResource("1_okf32")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "kiss kiss kiss kiss kiss kiss kiss kiss kiss kiss"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_okf32"]
+script = ExtResource("1_okf32")
+specific_post = 0
+score_range = Vector2(0, 100)
+comment_string = "EXCITED FOR UPDATES PLS WRITE A KISS SCENE"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_bvyst"]
+script = ExtResource("1_okf32")
+specific_post = 7
+score_range = Vector2(0, 100)
+comment_string = "BIG KISSES TO ALL INDIE GAME ENJOYERS"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_gvc0v"]
+script = ExtResource("1_okf32")
+specific_post = 4
+score_range = Vector2(0, 100)
+comment_string = "this is CRAAAAZYYYY jusut make them kiss already"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_ppbvq"]
+script = ExtResource("1_okf32")
+specific_post = 6
+score_range = Vector2(0, 100)
+comment_string = "KIIIIIIIIIIIIIIIISSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[resource]
+script = ExtResource("3_gvc0v")
+profile_pic = ExtResource("2_okf32")
+username = "dazzlingSquares"
+comments = Array[ExtResource("1_okf32")]([SubResource("Resource_8qsee"), SubResource("Resource_s4l08"), SubResource("Resource_72x1p"), SubResource("Resource_sey83"), SubResource("Resource_okf32"), SubResource("Resource_bvyst"), SubResource("Resource_gvc0v"), SubResource("Resource_ppbvq")])
+metadata/_custom_type_script = "uid://08i6jyrhkscd"
