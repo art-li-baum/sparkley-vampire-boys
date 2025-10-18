@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Commentor" load_steps=6 format=3 uid="uid://bvcpxolvxbtpu"]
+[gd_resource type="Resource" script_class="Commentor" load_steps=10 format=3 uid="uid://bvcpxolvxbtpu"]
 
 [ext_resource type="Script" uid="uid://bmpqghx5yibll" path="res://resources/comments/comment.gd" id="1_5wcom"]
 [ext_resource type="Texture2D" uid="uid://cj0w6evmttgt1" path="res://UI/images/hell.png" id="2_5wcom"]
@@ -18,9 +18,41 @@ score_range = Vector2(0, 100)
 comment_string = "PEAK literature, as always"
 metadata/_custom_type_script = "uid://bmpqghx5yibll"
 
+[sub_resource type="Resource" id="Resource_5wcom"]
+script = ExtResource("1_5wcom")
+specific_post = 4
+score_range = Vector2(0, 100)
+comment_string = "CR4SH OUT OF THE CENTURY $$$$
+
+But fr, I hope you keep writing :||||"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_610b8"]
+script = ExtResource("1_5wcom")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "V4MPS V4MPS V4MPS"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_qkp4a"]
+script = ExtResource("1_5wcom")
+specific_post = 6
+score_range = Vector2(0, 100)
+comment_string = "i iz W33Ping T
+ThE
+MOST BUETIFUL"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
+[sub_resource type="Resource" id="Resource_217so"]
+script = ExtResource("1_5wcom")
+specific_post = -1
+score_range = Vector2(0, 100)
+comment_string = "H4VE DEY KiSSED YEST????"
+metadata/_custom_type_script = "uid://bmpqghx5yibll"
+
 [resource]
 script = ExtResource("3_qkp4a")
 profile_pic = ExtResource("2_5wcom")
 username = "-LucyxxxHellsing-"
-comments = Array[ExtResource("1_5wcom")]([SubResource("Resource_evb40"), SubResource("Resource_e42pe")])
+comments = Array[ExtResource("1_5wcom")]([SubResource("Resource_evb40"), SubResource("Resource_e42pe"), SubResource("Resource_5wcom"), SubResource("Resource_610b8"), SubResource("Resource_qkp4a"), SubResource("Resource_217so")])
 metadata/_custom_type_script = "uid://08i6jyrhkscd"
