@@ -13,7 +13,9 @@ func start_timer(post : BlogPost):
 	if(post.no_timer): 
 		value = 0
 		AudioController.play_music()
+		visible = false
 		return
+	visible = true
 	allotted_time = post.time_to_write
 	if (allotted_time <= 0):
 		post.eval_time()

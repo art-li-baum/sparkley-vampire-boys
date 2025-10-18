@@ -3,6 +3,8 @@ class_name BlogStats extends Control
 @export var follower_count : RichTextLabel
 @export var likes_count : RichTextLabel
 
+@export var animator : AnimationPlayer
+
 const rolling_effect : String = "[roll]10000000[/roll]"
 
 var followers = 10
@@ -23,6 +25,8 @@ func reveal():
 		followers += randi() % 80 + 20
 		likes += randi() % 300 + 50
 	
+	animator.play("ding")
+	AudioController.play_ding_noise()
 	
 	follower_count.text = str(followers)
 	likes_count.text = str(likes)
