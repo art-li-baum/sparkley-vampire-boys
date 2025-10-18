@@ -122,11 +122,10 @@ func check_if_done():
 	
 	while(eval_list[current_index] > 0):
 		current_index += 1
-		
 		if(current_index >= current_line_end):
 			#TEST
 			print("finished the line")
-			GameManager.finishedLine.emit(float(current_line) / line_list.size())
+			GameManager.finishedLine.emit((float(current_line) + 1) / line_list.size())
 			current_line += 1
 			if(current_line < line_list.size()):
 				_load_line(current_line)

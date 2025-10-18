@@ -37,18 +37,28 @@ func react_eval(loop: int, score:int):
 			header.text = "About Me"
 			
 func quip(completion : float):
-	
+	print(completion)
 	#TODO: have a random chance to encourage/ egg on the player 
 	if(randf() > 0.3):
 		if(completion > 0.90):
 			dialogue_box.read_text("almost there! just a bit more!! ^_^")
-		if(completion > 0.75):
+		elif(completion > 0.75):
 			dialogue_box.read_text("this is a great post so far, i love it!!")
-		if(completion > 0.60):
-			dialogue_box.read_text("i love this line, gotta be one of my favorites <3")
-		if(completion > 0.50):
+		elif(completion > 0.68):
+			dialogue_box.read_text("oh i'm so excited to post this one!!")
+		elif(completion > 0.60):
+			dialogue_box.read_text("i love this line!! one of my favorites <3")
+		elif(completion > 0.53):
+			dialogue_box.read_text("squeeeeal! you're doinng great!") 
+		elif(completion > 0.48):
 			dialogue_box.read_text("typing is soooo much harder than it needs to be, but you're great at it1!!")
-		if(completion > 0.25):
+		elif(completion > 0.42):
+			dialogue_box.read_text("ugh i love damien! he's so dreamy!!")
+		elif(completion > 0.34):
+			dialogue_box.read_text("aaa i love alaric!! he's so handsome...")
+		elif(completion > 0.26): 
+			dialogue_box.read_text("omg we're making progress on this chapter so fast!")
+		elif(completion > 0.16):
 			dialogue_box.read_text("that's a really good start! keep it going! owo")
 		else:
-			dialogue_box.read_text("that's a good one!")
+			dialogue_box.read_text("yaaay! you finished typing a line!")
