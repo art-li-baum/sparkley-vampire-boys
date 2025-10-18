@@ -1,5 +1,7 @@
 extends VBoxContainer
 
+@export var post_pic : TextureRect
+
 var line_scene = preload("uid://bdwc8l0npxyfu")
 var current_post : BlogPost
 var line_list : Array[String]
@@ -24,6 +26,8 @@ func _pull_post(post : BlogPost):
 	
 	line_textboxes.clear()
 	line_list.clear()
+	
+	post_pic.texture = post.picture
 	
 	current_post = post
 	

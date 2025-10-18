@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=3 format=3 uid="uid://dw8djn4vvso13"]
+
+[ext_resource type="Texture2D" uid="uid://5ag3khhfxhpj" path="res://resources/real_posts/5.jpg" id="1_8mcgm"]
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="2_xto4v"]
+
+[resource]
+script = ExtResource("2_xto4v")
+picture = ExtResource("1_8mcgm")
+blog_text = "chapter 27: damien knnelt next to alaric. “are you okay?” damien asked. “i’m fine,” alaric said, but he was struggling to breath. “i can’t believe you got hurt trying to protect me,” damien said. “why did you do that?” as he talked, damien pressed his thumb to alaric’s chest. alaric’s wound started closing, but the healing wasn’t working fast enough! damien took a deep breath. there was only one thing he could do. damien leaned in and...... kissed alaric!!!!! the kiss transfered damien’s breath into alaric’s lungs, which caused the healing energy to flow as fast as possible. alaric’s injuries sparkled as they healed! alaric felt the energy in his body. he turned to damien gentley. “thank you,” he said. “the truth is... damien... i protected you from the wolves because i love you!”"
+urgency = 1
+time_to_write = 0.0
+line_length = 50
+no_timer = true
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

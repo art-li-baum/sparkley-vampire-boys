@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="Conversation" load_steps=12 format=3 uid="uid://bqfi5t63yxgcu"]
+
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_f6d2k"]
+[ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_02rxy"]
+
+[sub_resource type="Resource" id="Resource_f6d2k"]
+script = ExtResource("1_f6d2k")
+line_text = "aaand that’s a wrap!!! "
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_02rxy"]
+script = ExtResource("1_f6d2k")
+line_text = "DAMIEN x ALARIC FOREVER!!!!!!!!!!"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.6
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_opnm5"]
+script = ExtResource("1_f6d2k")
+line_text = "actually it’s kind of funny… this is a romance, so it made sense to end with a kiss, right?"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_71ftu"]
+script = ExtResource("1_f6d2k")
+line_text = "but i think kissing is a little bit gross! xd"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.0
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_lpwt3"]
+script = ExtResource("1_f6d2k")
+line_text = "but.. damien and alaric are both sooo hot… and how else am i supposed to show that they’re meant for each other??"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_xqhop"]
+script = ExtResource("1_f6d2k")
+line_text = "… i think that’s it for me. my last connection to the human world is complete!"
+anim_state = "idle_float"
+text_read_speed = 0.8
+tone_pitch = 1.1
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_sbrlq"]
+script = ExtResource("1_f6d2k")
+line_text = "i’ll be passing on soon…"
+anim_state = "idle_float"
+text_read_speed = 0.6
+tone_pitch = 1.05
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_ucnrs"]
+script = ExtResource("1_f6d2k")
+line_text = "but at least people will have this fic to remember me by! XD"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_ayrok"]
+script = ExtResource("1_f6d2k")
+line_text = "actually, i think i hear some ghostly voices whispering to me… they want me to make one last post! "
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[resource]
+script = ExtResource("2_02rxy")
+lines = Array[ExtResource("1_f6d2k")]([SubResource("Resource_f6d2k"), SubResource("Resource_02rxy"), SubResource("Resource_opnm5"), SubResource("Resource_71ftu"), SubResource("Resource_lpwt3"), SubResource("Resource_xqhop"), SubResource("Resource_sbrlq"), SubResource("Resource_ucnrs"), SubResource("Resource_ayrok")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"

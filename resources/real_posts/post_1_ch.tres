@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=3 format=3 uid="uid://dxl4nepweevd3"]
+
+[ext_resource type="Texture2D" uid="uid://xj6eab8uvi8" path="res://resources/real_posts/1.jpg" id="1_v4djk"]
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="2_pp4b1"]
+
+[resource]
+script = ExtResource("2_pp4b1")
+picture = ExtResource("1_v4djk")
+blog_text = "chapter 23: damien burstt into the clearimg and scared away the werewolf attacking alaric! “are you okay??” he cried. alaric had a gash across chisseled abs! “i waas trying to protect you,” alaric gasped. he was bleeding out and his healing powers couldn’t save him! “alaric...” damien said. he had to use his secret powers!! it was a big risk, but he could save alaric’s life!"
+urgency = 1
+time_to_write = 120.0
+line_length = 50
+no_timer = false
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

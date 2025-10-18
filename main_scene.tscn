@@ -691,8 +691,6 @@ theme_override_constants/margin_right = 60
 
 [node name="VBoxContainer" type="VBoxContainer" parent="right_side/ScrollContainer/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="date" type="RichTextLabel" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -710,10 +708,11 @@ layout_mode = 2
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="post_container" type="VBoxContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_text"]
+[node name="post_container" type="VBoxContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_text" node_paths=PackedStringArray("post_pic")]
 layout_mode = 2
 theme = ExtResource("3_66tet")
 script = ExtResource("15_u0ygc")
+post_pic = NodePath("../../margin_pic/PostPic")
 
 [node name="body_text2" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_text/post_container" instance=ExtResource("16_7th4q")]
 layout_mode = 2
@@ -756,6 +755,17 @@ value = 100.0
 show_percentage = false
 script = ExtResource("12_mo76n")
 
+[node name="margin_pic" type="MarginContainer" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.83
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PostPic" type="TextureRect" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_pic"]
+layout_mode = 2
+expand_mode = 5
+
 [node name="HSeparator2" type="HSeparator" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxLine_nneo1")
@@ -792,6 +802,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="conversation-panel" type="Panel" parent="." node_paths=PackedStringArray("portrait", "portaint_anim", "conversation")]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

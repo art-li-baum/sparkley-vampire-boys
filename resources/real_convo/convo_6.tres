@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="Conversation" load_steps=8 format=3 uid="uid://cp82dfv5haos4"]
+
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_q7k1l"]
+[ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_flbv6"]
+
+[sub_resource type="Resource" id="Resource_vv0rg"]
+script = ExtResource("1_q7k1l")
+line_text = "that … actually felt pretty good to write?? o-o and it looks like a couple people are still here, and liked it!! :”3"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_olpja"]
+script = ExtResource("1_q7k1l")
+line_text = "did YOU like it? .. actually it doesn’t matter!! :P because *i* liked it!!"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.4
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_ebu45"]
+script = ExtResource("1_q7k1l")
+line_text = "and soooooo up next, , ,the very last chapter!"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_rcsvg"]
+script = ExtResource("1_q7k1l")
+line_text = "i need to put  my heart and soul into this one!! it’s the very end!! XD … hmm, let me think about it…"
+anim_state = "idle_float"
+text_read_speed = 0.8
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_cjh5v"]
+script = ExtResource("1_q7k1l")
+line_text = "okay, i’m ready! let’s go!"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.4
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[resource]
+script = ExtResource("2_flbv6")
+lines = Array[ExtResource("1_q7k1l")]([SubResource("Resource_vv0rg"), SubResource("Resource_olpja"), SubResource("Resource_ebu45"), SubResource("Resource_rcsvg"), SubResource("Resource_cjh5v")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"

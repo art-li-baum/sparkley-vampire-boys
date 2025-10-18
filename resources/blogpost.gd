@@ -2,6 +2,8 @@
 class_name BlogPost
 extends Resource
 
+@export var picture : CompressedTexture2D
+
 @export_multiline var blog_text: String
 @export var urgency : int = 1
 @export_tool_button("Suggest", "Callable") var eval_action = eval_time

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=3 format=3 uid="uid://cmumfylxi2pik"]
+
+[ext_resource type="Texture2D" uid="uid://cjnvhyau72icv" path="res://resources/real_posts/2.jpg" id="1_hxubs"]
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="2_hxjsn"]
+
+[resource]
+script = ExtResource("2_hxjsn")
+picture = ExtResource("1_hxubs")
+blog_text = "chapter 24: suddenly, galen (alaric’s brother) appeared! “i can’t beleive you hurt my brother like this,” he scowled. “what?” damein said. “your going to use your secret powers to hurt alaric!” galen said. “no!” damien cried. “i was trying to help him.” but then damien felt his mind being attaked by galen’s telapathic powers. galen was forcing damien away from alaric! then, “damien, how could you lie to me like that??” alaric said. damien couldn’t beleive it. galen had also brainwashed alaric!"
+urgency = 1
+time_to_write = 164.4
+line_length = 50
+no_timer = false
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

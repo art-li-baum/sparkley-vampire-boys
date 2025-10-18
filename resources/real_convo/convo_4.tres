@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Conversation" load_steps=6 format=3 uid="uid://4agrms7ney6g"]
+
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_rd0ku"]
+[ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_akwmm"]
+
+[sub_resource type="Resource" id="Resource_vv0rg"]
+script = ExtResource("1_rd0ku")
+line_text = "O-oooooooooooooo!!!!!"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.6
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_olpja"]
+script = ExtResource("1_rd0ku")
+line_text = "the commenters hate me ????????!!!!!!!!!!!!!!!!!!!!!!!!!
+
+DX
+"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.0
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_ebu45"]
+script = ExtResource("1_rd0ku")
+line_text = "you see how unfair this is right? i have to say something about this…"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[resource]
+script = ExtResource("2_akwmm")
+lines = Array[ExtResource("1_rd0ku")]([SubResource("Resource_vv0rg"), SubResource("Resource_olpja"), SubResource("Resource_ebu45")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"

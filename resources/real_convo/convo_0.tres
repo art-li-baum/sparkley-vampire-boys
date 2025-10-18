@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Conversation" load_steps=9 format=3 uid="uid://bbcaqr4rs4sx"]
+
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_vv0rg"]
+[ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_olpja"]
+
+[sub_resource type="Resource" id="Resource_vv0rg"]
+script = ExtResource("1_vv0rg")
+line_text = "omg hiiiiii !!!!! its been YEARS since anyone found my laptop o_O"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.4
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_olpja"]
+script = ExtResource("1_vv0rg")
+line_text = "ive been haunting it for so long..... XD"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_ebu45"]
+script = ExtResource("1_vv0rg")
+line_text = "i'm BloodMo0nsGhoul.. and this is the HAUNTED CASTLE, my ghoulblr blog!!! >:3"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.1
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_rcsvg"]
+script = ExtResource("1_vv0rg")
+line_text = "now that ur here, can i ask u for a favor?? :3"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_cjh5v"]
+script = ExtResource("1_vv0rg")
+line_text = "i REALLY want to finish updating my fanfic! i just have a couple more chapters to write!!"
+anim_state = "idle_float"
+text_read_speed = 1.2
+tone_pitch = 1.3
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_7jts4"]
+script = ExtResource("1_vv0rg")
+line_text = "i’ll put them on the screen for you, all i need is for you to type them!"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[resource]
+script = ExtResource("2_olpja")
+lines = Array[ExtResource("1_vv0rg")]([SubResource("Resource_vv0rg"), SubResource("Resource_olpja"), SubResource("Resource_ebu45"), SubResource("Resource_rcsvg"), SubResource("Resource_cjh5v"), SubResource("Resource_7jts4")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"

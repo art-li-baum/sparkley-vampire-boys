@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Conversation" load_steps=7 format=3 uid="uid://dps03m1ei8tcn"]
+
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_fppg3"]
+[ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_tkmx4"]
+
+[sub_resource type="Resource" id="Resource_vv0rg"]
+script = ExtResource("1_fppg3")
+line_text = "WOW! that’s a lot of comments!! woah…"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.4
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_olpja"]
+script = ExtResource("1_fppg3")
+line_text = "so many people are counting on us to write this!"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_ebu45"]
+script = ExtResource("1_fppg3")
+line_text = "but they didn’t seem to like chapter 24 as much as chapter 23…"
+anim_state = "idle_float"
+text_read_speed = 0.8
+tone_pitch = 1.0
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_rcsvg"]
+script = ExtResource("1_fppg3")
+line_text = "i think we just need to write EVEN MORE!!"
+anim_state = "idle_float"
+text_read_speed = 0.8
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[resource]
+script = ExtResource("2_tkmx4")
+lines = Array[ExtResource("1_fppg3")]([SubResource("Resource_vv0rg"), SubResource("Resource_olpja"), SubResource("Resource_ebu45"), SubResource("Resource_rcsvg")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"

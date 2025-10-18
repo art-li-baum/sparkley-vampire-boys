@@ -1,19 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6xhx4uhti62q"]
+[gd_scene load_steps=20 format=3 uid="uid://b6xhx4uhti62q"]
 
 [ext_resource type="Script" uid="uid://df1nm5dbf6rax" path="res://classes/sequence.gd" id="1_r4s3i"]
 [ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="2_sexdi"]
-[ext_resource type="Resource" uid="uid://sqq8oki2y20p" path="res://resources/posts/test_sequential.tres" id="3_bpke3"]
-[ext_resource type="Resource" uid="uid://dnwxsiuok7pae" path="res://resources/posts/test_score.tres" id="3_jjmfn"]
-[ext_resource type="Resource" uid="uid://cn3al3re6q00p" path="res://resources/posts/intro.tres" id="3_qgkb7"]
-[ext_resource type="Resource" uid="uid://bt2qd7wyj4b0v" path="res://resources/posts/chapter1.tres" id="4_qgkb7"]
+[ext_resource type="Resource" uid="uid://b0qg0wmsyr8gs" path="res://resources/real_posts/post_0.tres" id="3_y0odk"]
+[ext_resource type="Resource" uid="uid://dxl4nepweevd3" path="res://resources/real_posts/post_1_ch.tres" id="4_70s43"]
+[ext_resource type="Resource" uid="uid://cmumfylxi2pik" path="res://resources/real_posts/post_2_ch.tres" id="5_yeybb"]
 [ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="6_0wml1"]
-[ext_resource type="Resource" uid="uid://ca38umfefw0kk" path="res://resources/ghost_conversations/intro_1.tres" id="8_j2uhe"]
-[ext_resource type="Resource" uid="uid://deu564ntq2ny8" path="res://resources/ghost_conversations/3.tres" id="8_qgkb7"]
-[ext_resource type="Resource" uid="uid://bkbhsthp8uwf6" path="res://resources/ghost_conversations/intro_2.tres" id="9_sxbir"]
+[ext_resource type="Resource" uid="uid://mfk55qaau6qp" path="res://resources/real_posts/post_3_oof.tres" id="6_7rpkp"]
+[ext_resource type="Resource" uid="uid://chwfug3si128y" path="res://resources/real_posts/post_4_crash.tres" id="7_5eu0d"]
+[ext_resource type="Resource" uid="uid://c0tcyfe1ifmrp" path="res://resources/real_posts/post_5_retcon.tres" id="8_86rjg"]
+[ext_resource type="Resource" uid="uid://dw8djn4vvso13" path="res://resources/real_posts/post_6_kiss.tres" id="9_itjgo"]
+[ext_resource type="Resource" uid="uid://trfev15nxs7u" path="res://resources/real_posts/end.tres" id="10_yeybb"]
+[ext_resource type="Resource" uid="uid://bbcaqr4rs4sx" path="res://resources/real_convo/convo_0.tres" id="11_e0col"]
+[ext_resource type="Resource" uid="uid://u4qve3gnf87" path="res://resources/real_convo/convo_1.tres" id="12_cwbfm"]
+[ext_resource type="Resource" uid="uid://d0viev7coqb4i" path="res://resources/real_convo/convo_2.tres" id="13_2bwn4"]
+[ext_resource type="Resource" uid="uid://dps03m1ei8tcn" path="res://resources/real_convo/convo_3.tres" id="14_i2rrt"]
+[ext_resource type="Resource" uid="uid://4agrms7ney6g" path="res://resources/real_convo/convo_4.tres" id="15_fwc74"]
+[ext_resource type="Resource" uid="uid://bqrnqxlouvoue" path="res://resources/real_convo/convo_5.tres" id="16_2it5l"]
+[ext_resource type="Resource" uid="uid://cp82dfv5haos4" path="res://resources/real_convo/convo_6.tres" id="17_mtmaq"]
+[ext_resource type="Resource" uid="uid://bqfi5t63yxgcu" path="res://resources/real_convo/end.tres" id="19_7rpkp"]
 
 [node name="MainSequence" type="Node"]
 script = ExtResource("1_r4s3i")
-post_queue = Array[ExtResource("2_sexdi")]([ExtResource("3_qgkb7"), ExtResource("4_qgkb7"), ExtResource("3_jjmfn"), ExtResource("3_bpke3")])
-convo_queue = Array[ExtResource("6_0wml1")]([ExtResource("8_j2uhe"), ExtResource("9_sxbir"), ExtResource("8_qgkb7")])
+total_loops = 8
+post_queue = Array[ExtResource("2_sexdi")]([ExtResource("3_y0odk"), ExtResource("4_70s43"), ExtResource("5_yeybb"), ExtResource("6_7rpkp"), ExtResource("7_5eu0d"), ExtResource("8_86rjg"), ExtResource("9_itjgo"), ExtResource("10_yeybb")])
+convo_queue = Array[ExtResource("6_0wml1")]([ExtResource("11_e0col"), ExtResource("12_cwbfm"), ExtResource("13_2bwn4"), ExtResource("14_i2rrt"), ExtResource("15_fwc74"), ExtResource("16_2it5l"), ExtResource("17_mtmaq"), ExtResource("19_7rpkp")])
 metadata/_custom_type_script = "uid://df1nm5dbf6rax"
 metadata/_edit_horizontal_guides_ = [79.0, 59.0]

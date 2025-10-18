@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=3 format=3 uid="uid://trfev15nxs7u"]
+
+[ext_resource type="Texture2D" uid="uid://dc7u4t1s77xsc" path="res://resources/real_posts/end_post.png" id="1_383ih"]
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_yug6o"]
+
+[resource]
+script = ExtResource("1_yug6o")
+picture = ExtResource("1_383ih")
+blog_text = "this game was made by arthur li baum and annabel sun for chicaghoul 2025. thank you for playing!"
+urgency = 1
+time_to_write = 30.0
+line_length = 50
+no_timer = false
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

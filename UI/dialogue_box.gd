@@ -5,7 +5,6 @@ class_name DialogueBox extends RichTextLabel
 func _ready() -> void:
 	GameManager.openConvo.connect(continuity)
 
-
 func read_text(message : String):
 	
 	text = message

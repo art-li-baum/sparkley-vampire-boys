@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=2 format=3 uid="uid://b0qg0wmsyr8gs"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="1_nvn3e"]
+
+[resource]
+script = ExtResource("1_nvn3e")
+blog_text = "hi followers!!~ this is a quicj news update, i'm finally back to finish this fanfic!! sorryt for leaving you guiys on a cliffhanger last time u_u... will damien save alaric from the wolves... and masybe figure out their feelinggs??? you’ll get to find out OwO next post soon <3"
+urgency = 1
+time_to_write = 90.0
+line_length = 50
+no_timer = true
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

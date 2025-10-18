@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=3 format=3 uid="uid://mfk55qaau6qp"]
+
+[ext_resource type="Texture2D" uid="uid://yuyf8txqty5w" path="res://resources/real_posts/3.jpg" id="1_efify"]
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="2_fhqoi"]
+
+[resource]
+script = ExtResource("2_fhqoi")
+picture = ExtResource("1_efify")
+blog_text = "chapter 25: damien decides to fighht galen sooo he takes his daggger and enfuses it with vamperic energyt but then galen growsd bat wings and flys into the air, damien sees galen flying and deicides to channel vampiric powwer of the moon thru his dagger and he throws it at galen BUT galen catchesthe dagger and shatters, it, releesing the moon power, which all falls to alaric, which would normaly burn him as the consentraited reflekted light of the sun, BUT alaric actually has sparkley vampire skin which is a rare feature which allows him to ABSORB the moon power. the power transformms alaric into a moon vampire which lets him countrol the spireits of the forest, but galen uses his control of alaric’s mind to send the forest spiritss after damien. damien sucks the blood ouit of a forest spirit whih lets him gain spirit hovering powers and then he draws a SECOND daggger and throws it at galen, sliceing off one of his bat wings, galen skreeches from the pain and it breaks the mind controll on alaric, alaric ALSO has mind control powers becuz of course he does he’s galen’s brother and so he decidies to start trying to turn his mind against galen!!!!!!!!!!"
+urgency = 3
+time_to_write = 190.0
+line_length = 50
+no_timer = false
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"

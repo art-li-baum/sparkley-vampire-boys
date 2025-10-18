@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Conversation" load_steps=7 format=3 uid="uid://u4qve3gnf87"]
+
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_onkym"]
+[ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_u5yux"]
+
+[sub_resource type="Resource" id="Resource_vv0rg"]
+script = ExtResource("1_onkym")
+line_text = "oh my gods, we have a few new followers already?? seems like people are excited!"
+anim_state = "idle_float"
+text_read_speed = 1.2
+tone_pitch = 1.4
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_olpja"]
+script = ExtResource("1_onkym")
+line_text = "let’s not keep them waiting for too long… think you can type fast?"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_ebu45"]
+script = ExtResource("1_onkym")
+line_text = "oh, and B-T-W, you can type letters in any order you want, as long as you type every letter in the text!"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_rcsvg"]
+script = ExtResource("1_onkym")
+line_text = "and if you don’t like that…. well, that’s just how it is :P im just a ghoul trying her best ^-^"
+anim_state = "talk_bounce"
+text_read_speed = 1.0
+tone_pitch = 1.4
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[resource]
+script = ExtResource("2_u5yux")
+lines = Array[ExtResource("1_onkym")]([SubResource("Resource_vv0rg"), SubResource("Resource_olpja"), SubResource("Resource_ebu45"), SubResource("Resource_rcsvg")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"

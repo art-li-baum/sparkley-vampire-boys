@@ -10,12 +10,15 @@ var main_music : AudioStream = preload("uid://b0c10b0uylflm")
 var sfx_players : Array[AudioStreamPlayer]
 
 var ghost_player : AudioStreamPlayer
+var audio_player : AudioStreamPlayer
 
 func _ready() -> void:
 	sfx_players = []
 	ghost_player = AudioStreamPlayer.new()
 	add_child(ghost_player)
 	ghost_player.stream = ghost_noise
+	audio_player = AudioStreamPlayer.new()
+	add_child(audio_player)
 
 func play_key_press():
 	var sfx_player = get_free_player()
@@ -32,9 +35,9 @@ func play_ghost_noise(tone : float = 1.2):
 	ghost_player.play()
 
 func play_music(track : AudioStream = main_music):
-	var p = get_free_player()
-	p.stream = track
-	p.play()
+	if(audio_player.playing): return
+	audio_player.stream = track
+	audio_player.play()
 
 func get_free_player()-> AudioStreamPlayer:
 	

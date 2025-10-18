@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Conversation" load_steps=8 format=3 uid="uid://d0viev7coqb4i"]
+
+[ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_nlhid"]
+[ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_coewd"]
+
+[sub_resource type="Resource" id="Resource_vv0rg"]
+script = ExtResource("1_nlhid")
+line_text = "O M G !! "
+anim_state = "idle_float"
+text_read_speed = 0.6
+tone_pitch = 1.0
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_olpja"]
+script = ExtResource("1_nlhid")
+line_text = "can you BELIEVE how many people followed me from that? O-O"
+anim_state = "talk_bounce"
+text_read_speed = 1.2
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_ebu45"]
+script = ExtResource("1_nlhid")
+line_text = "soo umm :P i was going to end the story in the next chapter,"
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_rcsvg"]
+script = ExtResource("1_nlhid")
+line_text = "but aaaactually, can you help me type some more?
+
+we have to keep posting for the new fans!!!!!
+"
+anim_state = "idle_float"
+text_read_speed = 0.8
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[sub_resource type="Resource" id="Resource_cjh5v"]
+script = ExtResource("1_nlhid")
+line_text = "hmmm……. *now* what comes next? "
+anim_state = "idle_float"
+text_read_speed = 1.0
+tone_pitch = 1.2
+metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
+
+[resource]
+script = ExtResource("2_coewd")
+lines = Array[ExtResource("1_nlhid")]([SubResource("Resource_vv0rg"), SubResource("Resource_olpja"), SubResource("Resource_ebu45"), SubResource("Resource_rcsvg"), SubResource("Resource_cjh5v")])
+metadata/_custom_type_script = "uid://bpbj3owkrmkee"

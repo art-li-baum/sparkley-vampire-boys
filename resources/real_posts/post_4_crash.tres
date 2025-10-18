@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BlogPost" load_steps=2 format=3 uid="uid://chwfug3si128y"]
+
+[ext_resource type="Script" uid="uid://dyw1wwfvsuuqc" path="res://resources/blogpost.gd" id="2_kujqo"]
+
+[resource]
+script = ExtResource("2_kujqo")
+blog_text = "hi followers!! i’ll post chapter 26 soon for those of you that are EAEGRLY WAITING. but for everyone else, i’m here to say. YOU GUYS ARE BIENG SO MEAN!! all of your comments are SO unfair! i’m writing all of this for you for free, and everybody was demanding more, shouldn’t you be happy to get an update? i gave you SO many new cool plot points in the last update and it was the looongest update i’ve EVER written, and i just think it’s SO terraible of everyone that you aren’t careing about my hard work! anyways i’ll post the next update soon, IF ANYBODY STILL CARES, and you’d better all like it :/"
+urgency = 1
+time_to_write = 194.4
+line_length = 50
+no_timer = false
+metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"
