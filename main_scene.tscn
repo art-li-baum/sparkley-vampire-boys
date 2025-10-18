@@ -805,7 +805,6 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="conversation-panel" type="Panel" parent="." node_paths=PackedStringArray("portrait", "portaint_anim", "conversation")]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -823,9 +822,9 @@ offset_bottom = 1080.0
 [node name="ghost_portrait" type="TextureRect" parent="conversation-panel"]
 layout_mode = 1
 offset_left = 380.0
-offset_top = 220.03
+offset_top = 220.0
 offset_right = 892.0
-offset_bottom = 732.03
+offset_bottom = 732.0
 scale = Vector2(0.685, 0.685)
 texture = ExtResource("6_opjno")
 expand_mode = 2
