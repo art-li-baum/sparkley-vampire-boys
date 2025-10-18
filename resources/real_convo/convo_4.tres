@@ -13,7 +13,7 @@ metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_olpja"]
 script = ExtResource("1_rd0ku")
-line_text = "the commenters hate me ????????!!!!!!!!!!!!!!!!!!!!!!!!!
+line_text = "THE COMMENTERS HATE ME ????????!!!!!!!!!!!!!
 
 DX
 "
@@ -24,7 +24,7 @@ metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_ebu45"]
 script = ExtResource("1_rd0ku")
-line_text = "you see how unfair this is right? i have to say something about this…"
+line_text = "you see how UNFAIR  this is right? i have to SAY SOMETHING about this…"
 anim_state = "idle_float"
 text_read_speed = 1.0
 tone_pitch = 1.2

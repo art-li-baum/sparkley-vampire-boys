@@ -29,7 +29,7 @@ metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_rcsvg"]
 script = ExtResource("1_onkym")
-line_text = "and if you don’t like that…. well, that’s just how it is :P im just a ghoul trying her best ^-^"
+line_text = "if you don’t like that…. well, that’s just how it is :P im just a ghoul trying her best ^-^"
 anim_state = "talk_bounce"
 text_read_speed = 1.0
 tone_pitch = 1.4

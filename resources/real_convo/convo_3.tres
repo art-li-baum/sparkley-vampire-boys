@@ -13,7 +13,7 @@ metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_olpja"]
 script = ExtResource("1_fppg3")
-line_text = "so many people are counting on us to write this!"
+line_text = "SO MANY PEOPLE ARE COUNTING ON US TO WRITE THIS!! oWo"
 anim_state = "idle_float"
 text_read_speed = 1.0
 tone_pitch = 1.2
@@ -21,7 +21,7 @@ metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_ebu45"]
 script = ExtResource("1_fppg3")
-line_text = "but they didn’t seem to like chapter 24 as much as chapter 23…"
+line_text = "BUT... chapter 24 didn't get as many likes as much as chapter 23…"
 anim_state = "idle_float"
 text_read_speed = 0.8
 tone_pitch = 1.0
@@ -29,7 +29,7 @@ metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_rcsvg"]
 script = ExtResource("1_fppg3")
-line_text = "i think we just need to write EVEN MORE!!"
+line_text = "OK, I HAVE AN IDEA! O^O WE HAVE TO GET WRITING!"
 anim_state = "idle_float"
 text_read_speed = 0.8
 tone_pitch = 1.2

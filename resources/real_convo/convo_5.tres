@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="Conversation" load_steps=10 format=3 uid="uid://bqrnqxlouvoue"]
+[gd_resource type="Resource" script_class="Conversation" load_steps=9 format=3 uid="uid://bqrnqxlouvoue"]
 
 [ext_resource type="Script" uid="uid://cdhnwsiiyxk1f" path="res://resources/ghost_conversations/convo_line.gd" id="1_6b75t"]
 [ext_resource type="Script" uid="uid://bpbj3owkrmkee" path="res://resources/ghost_conversations/conversation.gd" id="2_wj73g"]
 
 [sub_resource type="Resource" id="Resource_vv0rg"]
 script = ExtResource("1_6b75t")
-line_text = "i don’t think that worked… "
+line_text = ". . ."
 anim_state = "idle_float"
 text_read_speed = 0.8
 tone_pitch = 1.0
@@ -13,7 +13,7 @@ metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_olpja"]
 script = ExtResource("1_6b75t")
-line_text = "everyone was reading my fic… but now i have almost no followers at all…"
+line_text = "i don’t think that worked…  now i have almost no followers at all! xd"
 anim_state = "idle_float"
 text_read_speed = 1.0
 tone_pitch = 1.2
@@ -47,21 +47,13 @@ metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
 [sub_resource type="Resource" id="Resource_6b75t"]
 script = ExtResource("1_6b75t")
-line_text = "maybe… we’ll just go back to the original plot…"
+line_text = "maybe we’ll just go back to the original plot… thanks for sticking with me UwU"
 anim_state = "idle_float"
 text_read_speed = 0.8
 tone_pitch = 1.1
 metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
 
-[sub_resource type="Resource" id="Resource_wj73g"]
-script = ExtResource("1_6b75t")
-line_text = "i’ll just have you type up the last few chapters…  thanks for sticking with me… uwu"
-anim_state = "idle_float"
-text_read_speed = 1.0
-tone_pitch = 1.02
-metadata/_custom_type_script = "uid://cdhnwsiiyxk1f"
-
 [resource]
 script = ExtResource("2_wj73g")
-lines = Array[ExtResource("1_6b75t")]([SubResource("Resource_vv0rg"), SubResource("Resource_olpja"), SubResource("Resource_ebu45"), SubResource("Resource_rcsvg"), SubResource("Resource_cjh5v"), SubResource("Resource_6b75t"), SubResource("Resource_wj73g")])
+lines = Array[ExtResource("1_6b75t")]([SubResource("Resource_vv0rg"), SubResource("Resource_olpja"), SubResource("Resource_ebu45"), SubResource("Resource_rcsvg"), SubResource("Resource_cjh5v"), SubResource("Resource_6b75t")])
 metadata/_custom_type_script = "uid://bpbj3owkrmkee"

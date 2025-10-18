@@ -8,4 +8,5 @@ blog_text = "damien walked carefully through the dark forest, tracking the spots
 urgency = 1
 time_to_write = 0.0
 line_length = 50
+no_timer = false
 metadata/_custom_type_script = "uid://dyw1wwfvsuuqc"
