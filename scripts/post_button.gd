@@ -18,9 +18,10 @@ func awake():
 	grab_focus()
 	current_function = submit
 
-func did_fail(failed : bool):
-	if(failed):
+func did_fail(passed : bool):
+	if(!passed):
 		text = "NEXT"
+		disabled = false
 		current_function = reveal
 
 func submit():

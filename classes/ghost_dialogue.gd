@@ -39,7 +39,7 @@ func react_eval(loop: int, score:int):
 func quip(completion : float):
 	print(completion)
 	#TODO: have a random chance to encourage/ egg on the player 
-	if(randf() > 0.3):
+	if(randf() > 0.4):
 		if(completion > 0.90):
 			dialogue_box.read_text("almost there! just a bit more!! ^_^")
 		elif(completion > 0.75):
