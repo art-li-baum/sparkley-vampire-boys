@@ -20,6 +20,14 @@ func _ready() -> void:
 	ghost_player.stream = ghost_noise
 	audio_player = AudioStreamPlayer.new()
 	add_child(audio_player)
+	
+	GameManager.reset.connect(_reset)
+
+func _reset():
+	audio_player.stop()
+	for s in sfx_players:
+		s.stop()
+	ghost_player.stop()
 
 func play_key_press():
 	var sfx_player = get_free_player()

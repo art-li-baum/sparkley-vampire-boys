@@ -18,6 +18,16 @@ const white_hex = "#f8f8ff"
 func _ready() -> void: 
 	GameManager.newBlogPost.connect(_pull_post)
 	GameManager.submitPost.connect(evaluate_post_progress)
+	GameManager.reset.connect(_reset)
+
+func _reset():
+	post_pic.texture = null
+	#Destroy all childern
+	for n in get_children():
+		n.queue_free()
+	line_textboxes.clear()
+	line_list.clear()
+	
 
 func _pull_post(post : BlogPost):
 	#Destroy all childern

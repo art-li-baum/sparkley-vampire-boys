@@ -784,7 +784,6 @@ layout_mode = 2
 [node name="PostButton" type="Button" parent="right_side/ScrollContainer/MarginContainer/VBoxContainer/margin_timer/hbox" node_paths=PackedStringArray("stats")]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-focus_mode = 0
 theme = ExtResource("2_nfk4m")
 theme_override_font_sizes/font_size = 26
 disabled = true
@@ -904,7 +903,7 @@ border_color = Color(0.964706, 0.611765, 0.588235, 1)
 border_width = 3.0
 editor_only = false
 
-[node name="conversation_box" type="RichTextLabel" parent="conversation-panel/dialogue" node_paths=PackedStringArray("animator")]
+[node name="conversation_box" type="RichTextLabel" parent="conversation-panel/dialogue" node_paths=PackedStringArray("animator", "next_button")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -919,9 +918,12 @@ theme = ExtResource("2_nfk4m")
 theme_override_font_sizes/normal_font_size = 36
 text = "I've got somethign to tell you :P long texst longadfsljsf sdndjfnj filtlu the box whats the limit of this box ablhisldfjbj lelhdfk ncvnmsdfjd fksdfbj k fgj jkd kow kfdflmdafi"
 scroll_active = false
+visible_characters = 0
 visible_characters_behavior = 1
+visible_ratio = 0.0
 script = ExtResource("18_7th4q")
 animator = NodePath("AnimationPlayer")
+next_button = NodePath("../TextureButton")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="conversation-panel/dialogue/conversation_box"]
 reset_on_save = false
@@ -943,7 +945,6 @@ offset_right = -20.0
 offset_bottom = -22.0
 grow_horizontal = 0
 grow_vertical = 0
-focus_mode = 0
 theme = ExtResource("2_nfk4m")
 theme_override_font_sizes/font_size = 24
 text = ">>"

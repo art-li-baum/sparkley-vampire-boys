@@ -16,6 +16,9 @@ signal completePost(score : int)
 signal openEval(loop : int , score : int)
 signal completeLoop()
 
+#util
+signal reset()
+
 var _sequence : Sequence = preload("uid://b6xhx4uhti62q").instantiate()
 
 var current_loop : int = 0 
@@ -36,6 +39,14 @@ func _ready() -> void:
 	completeConvo.connect(_blog_post)
 	completePost.connect(_post_score)
 	completeLoop.connect(_loop)
+	
+	reset.connect(_reset)
+
+func _reset()->void:
+	current_state = STATE.INITIAL
+	current_loop = 0
+	loop_scores.clear()
+
 
 func _post_convo():
 	current_state = STATE.GHOST
@@ -72,4 +83,7 @@ func _loop():
 func _process(delta: float) -> void:
 	if(current_state == STATE.INITIAL):
 		_post_convo()
+		
+	if(Input.is_action_just_pressed("Reset")):
+		reset.emit()
 		

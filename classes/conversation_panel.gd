@@ -15,7 +15,8 @@ func open_convo(convo : Conversation):
 	#TODO: some opening animations mayhaps?
 	visible = true
 	current_convo = convo
-	conversation.open_line(convo.lines[0])
+	current_convo.current_line = 0
+	conversation.open_line(convo.lines[convo.current_line])
 
 func close_convo(_bd):
 	#TODO: close animation?

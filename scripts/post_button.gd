@@ -15,6 +15,7 @@ func _open_post(_bp):
 
 func awake():
 	disabled = false
+	focus_mode = Control.FOCUS_ALL
 	grab_focus()
 	current_function = submit
 
@@ -35,6 +36,8 @@ func reveal():
 
 func complete():
 	disabled = true
+	release_focus()
+	focus_mode = Control.FOCUS_NONE
 	GameManager.completeLoop.emit()
 
 func _on_button_next_pressed():

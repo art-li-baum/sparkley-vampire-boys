@@ -8,8 +8,10 @@ var comment_scene : PackedScene = preload("uid://5bhsi4neomru")
 func _ready() -> void:
 	GameManager.openEval.connect(get_eval)
 	GameManager.newBlogPost.connect(_clear_comments)
+	GameManager.reset.connect(_clear_comments)
 	
 	_clear_comments()
+	
 
 func _clear_comments(_bp = null):
 	#Destroy all childern initally
