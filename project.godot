@@ -13,7 +13,8 @@ config_version=5
 config/name="Sparkely-Vampire-Boys"
 run/main_scene="uid://bw7cfrn3bwdcn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://dbjfxojln51y6"
+config/windows_native_icon="res://ghost_icon.ico"
 
 [autoload]
 
