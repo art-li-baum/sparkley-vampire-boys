@@ -21,8 +21,8 @@ metadata/_custom_type_script = "uid://bmpqghx5yibll"
 [sub_resource type="Resource" id="Resource_hwieb"]
 script = ExtResource("1_vnnr0")
 specific_post = 3
-score_range = Vector2(0, 100)
-comment_string = "This is a default post :)"
+score_range = Vector2(50, 100)
+comment_string = "this is NOT what happened in the canon </3"
 metadata/_custom_type_script = "uid://bmpqghx5yibll"
 
 [resource]
